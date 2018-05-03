@@ -2,3 +2,15 @@
     -fx-background-image: url('bg.jpg');
     -fx-background-size: contain;
 }
+
+.label{
+    -fx-background-color:  #CECECE;
+}
+
+.text-field{
+    -fx-background-color:  #EEEEEE;
+}
+
+.button{
+     -fx-background-color:   #58838C;
+}
