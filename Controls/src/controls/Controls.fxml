@@ -6,36 +6,46 @@
 <?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="573.0" prefWidth="544.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="controls.ControlsController">
+<AnchorPane id="AnchorPane" prefHeight="573.0" prefWidth="544.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.ControlsController">
     <children>
-        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
       <JFXTextField focusColor="#009688" layoutX="93.0" layoutY="125.0" promptText="First Name" />
       <JFXTextField focusColor="#009688" layoutX="306.0" layoutY="125.0" promptText="Last Name" />
       <JFXDatePicker layoutX="93.0" layoutY="189.0" promptText="Date of Birth" />
       <JFXToggleButton layoutX="209.0" layoutY="249.0" text="Male">
          <toggleGroup>
-            <ToggleGroup fx:id="GenderGroupe" />
+            <ToggleGroup fx:id="genderGroupe" />
          </toggleGroup>
       </JFXToggleButton>
-      <JFXToggleButton layoutX="314.0" layoutY="249.0" text="Femal" toggleGroup="$GenderGroupe" />
-      <Label layoutX="93.0" layoutY="270.0" text="Gender:" />
+      <JFXToggleButton layoutX="314.0" layoutY="249.0" text="Femal" toggleGroup="$genderGroupe" />
+      <Label layoutX="93.0" layoutY="270.0" text="Gender:" textFill="#009688">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
       <JFXCheckBox checkedColor="#009688" layoutX="234.0" layoutY="333.0" text="Fation" />
-      <JFXComboBox focusColor="#009688" layoutX="230.0" layoutY="427.0" prefHeight="25.0" prefWidth="195.0" />
-      <Text layoutX="315.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration Form" />
+      <JFXComboBox fx:id="educationCombo" focusColor="#009688" layoutX="94.0" layoutY="432.0" prefHeight="25.0" prefWidth="195.0" promptText="Education" />
+      <Text fill="#009688" layoutX="144.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration Form">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="32.0" />
+         </font></Text>
       <JFXCheckBox checkedColor="#009688" layoutX="335.0" layoutY="333.0" text="Technologie" />
       <JFXCheckBox checkedColor="#009688" layoutX="335.0" layoutY="379.0" text="News" />
       <JFXCheckBox checkedColor="#009688" layoutX="234.0" layoutY="379.0" text="Sports" />
-      <JFXButton buttonType="RAISED" layoutX="232.0" layoutY="501.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: #009688;" text="REGISTER" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="232.0" layoutY="501.0" onAction="#handleRegistration" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: #009688;" text="REGISTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <Label layoutX="93.0" layoutY="334.0" prefHeight="17.0" prefWidth="69.0" text="Interests:" />
+      <Label layoutX="93.0" layoutY="334.0" prefHeight="17.0" prefWidth="69.0" text="Interests:" textFill="#009688">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <MaterialDesignIconView fill="#009688" glyphName="ACCOUNT_PLUS" layoutX="94.0" layoutY="82.0" size="40" />
     </children>
 </AnchorPane>
