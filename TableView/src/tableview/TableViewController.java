@@ -10,12 +10,18 @@ import java.time.LocalDate;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 
 /**
  *
@@ -32,6 +38,16 @@ public class TableViewController implements Initializable {
     private TableColumn<Car, String> modelColumn;
     @FXML
     private TableColumn<Car, LocalDate> dateColumn;
+    @FXML
+    private Button deleteButton;
+    @FXML
+    private TextField brand;
+    @FXML
+    private TextField model;
+    @FXML
+    private DatePicker dateOfCirculation;
+    @FXML
+    private Button addCarButton;
     
    
     
@@ -49,8 +65,51 @@ public class TableViewController implements Initializable {
         modelColumn.setCellValueFactory(new PropertyValueFactory<> ("model"));
         dateColumn.setCellValueFactory(new PropertyValueFactory<> ("dateOfCirculation"));
         
+        brandColumn.setCellFactory(TextFieldTableCell.forTableColumn());
+        modelColumn.setCellFactory(TextFieldTableCell.forTableColumn());
+        
         carTableView.setItems(cars);
         
+        carTableView.setEditable(true);
+        
+        carTableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        
     }    
+
     
+    @FXML
+    private void onEditBrandCell(TableColumn.CellEditEvent<Car, String> event) {
+        Car carSelected = carTableView.getSelectionModel().getSelectedItem();
+        
+        carSelected.setBrand(event.getNewValue());
+        
+    }
+
+    @FXML
+    private void onEditModelCell(TableColumn.CellEditEvent<Car, String> event) {
+        
+        Car carSelected = carTableView.getSelectionModel().getSelectedItem();
+        
+        carSelected.setModel(event.getNewValue());
+    }
+    
+    @FXML
+    private void onDeleteRow(ActionEvent event){
+        
+        ObservableList<Car> cars = carTableView.getItems();
+        
+        ObservableList<Car> carsSelected = carTableView.getSelectionModel().getSelectedItems();
+        
+        cars.removeAll(carsSelected);
+    }
+
+   
+
+    @FXML
+    private void onAddCar(ActionEvent event) {
+        
+        Car newCar = new Car(brand.getText(),model.getText(),dateOfCirculation.getValue());
+           
+        carTableView.getItems().add(newCar);
+    }
 }
