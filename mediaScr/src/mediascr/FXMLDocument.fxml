@@ -14,7 +14,7 @@
             <MediaView fx:id="mediaViewer" />
          </children>
       </StackPane>
-      <clip>
+      
           <MenuBar prefHeight="25.0" prefWidth="574.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
@@ -35,7 +35,6 @@
           </Menu>
         </menus>
       </MenuBar>
-      </clip>   
    </children>
       
 

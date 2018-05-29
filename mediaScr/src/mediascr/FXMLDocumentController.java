@@ -8,14 +8,9 @@ package mediascr;
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.beans.binding.Bindings;
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.geometry.Bounds;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.media.Media;
@@ -57,8 +52,8 @@ public class FXMLDocumentController implements Initializable {
             mediaViewer.setMediaPlayer(mediaPlayer);
             
 
-            mediaViewer.fitHeightProperty().bind(Bindings.selectDouble(mediaViewer.sceneProperty(), "height"));
-            mediaViewer.fitWidthProperty().bind(Bindings.selectDouble(mediaViewer.sceneProperty(), "width"));
+//            mediaViewer.fitHeightProperty().bind(Bindings.selectDouble(mediaViewer.sceneProperty(), "height"));
+//            mediaViewer.fitWidthProperty().bind(Bindings.selectDouble(mediaViewer.sceneProperty(), "width"));
             
             
             
