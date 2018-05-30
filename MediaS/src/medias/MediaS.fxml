@@ -5,21 +5,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.media.MediaView?>
 
-<AnchorPane id="AnchorPane" prefHeight="571.0" prefWidth="658.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="medias.MediaSController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="medias.MediaSController">
    <children>
-      <MediaView fx:id="audioPlayer" fitHeight="200.0" fitWidth="200.0" layoutX="175.0" layoutY="30.0" />
-      <Button layoutX="422.0" layoutY="118.0" mnemonicParsing="false" onAction="#onChooseAudio" text="Choose Audio" />
-      <Button layoutX="422.0" layoutY="176.0" mnemonicParsing="false" onAction="#onPlay">
+      <MediaView fx:id="mediaViewer" fitHeight="360.0" fitWidth="640.0" layoutY="-1.0" />
+      <Button layoutX="217.0" layoutY="361.0" mnemonicParsing="false" onAction="#onChooseMedia" text="Choose Media" />
+      <Button layoutX="319.0" layoutY="362.0" mnemonicParsing="false" onAction="#onPlay">
          <graphic>
             <FontAwesomeIconView glyphName="PLAY" />
          </graphic>
       </Button>
-      <Button layoutX="461.0" layoutY="176.0" mnemonicParsing="false" onAction="#onPause">
+      <Button layoutX="358.0" layoutY="362.0" mnemonicParsing="false" onAction="#onPause">
          <graphic>
             <FontAwesomeIconView glyphName="PAUSE" />
          </graphic>
       </Button>
-      <Button layoutX="500.0" layoutY="176.0" mnemonicParsing="false" onAction="#onStop">
+      <Button layoutX="397.0" layoutY="362.0" mnemonicParsing="false" onAction="#onStop">
          <graphic>
             <FontAwesomeIconView glyphName="STOP" />
          </graphic>

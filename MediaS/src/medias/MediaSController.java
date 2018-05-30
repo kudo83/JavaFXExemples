@@ -23,7 +23,9 @@ import javafx.stage.FileChooser;
 public class MediaSController implements Initializable {
 
     @FXML
-    private MediaView audioPlayer;
+    private MediaView mediaViewer;
+    
+    private MediaPlayer mediaPlayer;
 
     
     @Override
@@ -32,23 +34,41 @@ public class MediaSController implements Initializable {
     }    
 
     @FXML
-    private void onChooseAudio(ActionEvent event) {
+    private void onChooseMedia(ActionEvent event) {
         
         FileChooser fileChooser = new FileChooser();
-        FileChooser.ExtensionFilter extentions = new FileChooser.ExtensionFilter ("Videos","*.mp3","*.wave");
+        FileChooser.ExtensionFilter extentions = new FileChooser.ExtensionFilter ("Medias","*.mp3","*.wave","*.mp4","*.flv");
         fileChooser.getExtensionFilters().add(extentions);
         
         File mediaFile = fileChooser.showOpenDialog(null);
+        
         if (mediaFile != null){
             Media media = new Media(mediaFile.toURI().toString());
-            MediaPlayer mediaPlayer = new MediaPlayer(media);
+            mediaPlayer = new MediaPlayer(media);         
+            mediaPlayer.setAutoPlay(true);    
+            mediaViewer.setMediaPlayer(mediaPlayer);
             
-            audioPlayer.setMediaPlayer(mediaPlayer);
-            
-            
-            mediaPlayer.setAutoPlay(true);
-            
-            
+        }
+    }
+
+    @FXML
+    private void onPlay(ActionEvent event) {
+        if (mediaPlayer != null){
+            mediaPlayer.play();
+        }
+    }
+
+    @FXML
+    private void onPause(ActionEvent event) {
+        if (mediaPlayer != null){
+            mediaPlayer.pause();
+        }
+    }
+
+    @FXML
+    private void onStop(ActionEvent event) {
+        if (mediaPlayer != null){
+            mediaPlayer.stop();
         }
     }
     
