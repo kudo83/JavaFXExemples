@@ -46,17 +46,17 @@ public class LoginController implements Initializable {
 
     @FXML
     private void onMenuAction(ActionEvent event) {
-        BtnSignIn.getStyleClass().removeAll("menuButtonSelected", "menuButton");
-        BtnSignUp.getStyleClass().removeAll("menuButtonSelected", "menuButton");
+        BtnSignIn.getStyleClass().removeAll("menu-item-selected");
+        BtnSignUp.getStyleClass().removeAll("menuButtonSelected");
 
         if (event.getSource() == BtnSignIn) {
-            BtnSignIn.getStyleClass().add("menuButtonSelected");
-            BtnSignUp.getStyleClass().add("menuButton");
+            BtnSignIn.getStyleClass().add("menu-item");
+            BtnSignUp.getStyleClass().add("menu-item-selected");
             signInPane.toFront();
 
         } else {
-            BtnSignIn.getStyleClass().add("menuButton");
-            BtnSignUp.getStyleClass().add("menuButtonSelected");
+            BtnSignIn.getStyleClass().add("menu-item-selected");
+            BtnSignUp.getStyleClass().add("menu-item");
             signUpPane.toFront();
         }
     }

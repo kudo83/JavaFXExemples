@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="627.0" prefWidth="798.0" style="-fx-background-color: #2B333E;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practiceproject.login.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="627.0" prefWidth="798.0" style="-fx-background-color: #2A303B;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practiceproject.login.LoginController">
     <children>
       <AnchorPane fx:id="signUpPane" layoutX="438.0" prefHeight="633.0" prefWidth="365.0" style="-fx-background-color: #2B333E;">
          <children>
@@ -41,10 +41,10 @@
             <Label layoutX="54.0" layoutY="147.0" text="EMAIL" textFill="#ababab" />
          </children>
       </AnchorPane>
-      <Pane layoutX="136.0" prefHeight="633.0" prefWidth="302.0" style="-fx-background-color: #242B35;">
+      <Pane layoutX="136.0" prefHeight="633.0" prefWidth="302.0" style="-fx-background-color: #242B35;" styleClass="#242B35">
          <children>
             <FontAwesomeIconView fill="WHITE" glyphName="SEND_ALT" layoutX="111.0" layoutY="323.0" size="80" />
-            <Text fill="WHITE" layoutX="68.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: 'Yesteryear', cursive;" text="Awsome Company" wrappingWidth="178.8203125">
+            <Text id="company_name" fill="WHITE" layoutX="68.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="logo" text="Awsome Company" wrappingWidth="178.8203125">
                <font>
                   <Font name="Yesteryear" size="28.0" />
                </font>
@@ -75,11 +75,11 @@
             </JFXButton>
          </children>
       </AnchorPane>
-      <JFXButton fx:id="BtnSignIn" layoutX="-1.0" layoutY="206.0" onAction="#onMenuAction" prefHeight="40.0" prefWidth="138.0" styleClass="menuButtonSelected" stylesheets="@../style.css" text="Sign In" textFill="WHITE">
+      <JFXButton fx:id="BtnSignIn" layoutX="-1.0" layoutY="206.0" onAction="#onMenuAction" prefHeight="40.0" prefWidth="138.0" styleClass="menu-item" stylesheets="@../style.css" text="Sign In" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="BtnSignUp" layoutX="-1.0" layoutY="247.0" onAction="#onMenuAction" prefHeight="40.0" prefWidth="138.0" styleClass="menuButton" stylesheets="@../style/style.css" text="Sign UP" textFill="WHITE" />
+      <JFXButton fx:id="BtnSignUp" layoutX="-1.0" layoutY="247.0" onAction="#onMenuAction" prefHeight="40.0" prefWidth="138.0" styleClass="menu-item" stylesheets="@../style/style.css" text="Sign UP" textFill="WHITE" />
     </children>
 </AnchorPane>

@@ -1,123 +1,176 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXButton?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
-<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="665.0" prefWidth="1067.0" stylesheets="@../style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="practiceproject.dashboard.DashboardController">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: white;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practiceproject.dashboard.DashboardController">
    <children>
-      <VBox layoutY="-6.0" prefHeight="672.0" prefWidth="200.0" styleClass="sideBar">
+      <HBox prefHeight="100.0" prefWidth="200.0" />
+      <Group />
+      <VBox prefHeight="666.0" prefWidth="200.0" styleClass="sideBar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="200.0" spacing="5.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" spacing="10.0" styleClass="dashLogo">
                <children>
-                  <FontAwesomeIconView fill="#908f8f" glyphName="HOME" size="20">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </FontAwesomeIconView>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="SEND_ALT" size="30" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN" wrappingWidth="136.82034301757812">
+                     <font>
+                        <Font name="Segoe UI Light" size="28.0" />
+                     </font>
+                  </Text>
                </children>
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="30.0" />
                </padding>
+            </HBox>
+            <HBox fx:id="mDash" alignment="CENTER_LEFT" onMouseClicked="#onMenuClicked" prefHeight="50.0" prefWidth="200.0" spacing="5.0" styleClass="menu-item-selected">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/home-page-G.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton styleClass="menu-item" />
+               </children>
                <VBox.margin>
-                  <Insets top="10.0" />
+                  <Insets />
                </VBox.margin>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
             </HBox>
-            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="200.0" spacing="5.0">
+            <HBox fx:id="mSearch" alignment="CENTER_LEFT" onMouseClicked="#onMenuClicked" prefHeight="50.0" prefWidth="200.0" spacing="5.0" styleClass="menu-item">
                <children>
-                  <FontAwesomeIconView fill="#908f8f" glyphName="SEARCH" size="20">
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-search-filled-G.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Search" />
+                  <Label text="Label" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </HBox>
+            <HBox fx:id="mTables" alignment="CENTER_LEFT" onMouseClicked="#onMenuClicked" prefHeight="50.0" prefWidth="200.0" spacing="5.0" styleClass="menu-item">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-show-sidepanel-G.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Tables">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
-                  </FontAwesomeIconView>
-                  <JFXTextField text="Search" />
+                  </Text>
                </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="30.0" />
                </padding>
             </HBox>
-            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="200.0" spacing="5.0">
+            <HBox fx:id="mCharts" alignment="CENTER_LEFT" onMouseClicked="#onMenuClicked" prefHeight="50.0" prefWidth="200.0" spacing="5.0" styleClass="menu-item">
                <children>
-                  <MaterialDesignIconView glyphName="HOME_OUTLINE" />
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Tables" />
-               </children>
-               <padding>
-                  <Insets left="10.0" />
-               </padding>
-            </HBox>
-            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="200.0" spacing="5.0">
-               <children>
-                  <FontAwesomeIconView fill="#908f8f" glyphName="HOME" size="20">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </FontAwesomeIconView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-chart-G.png" />
+                     </image>
+                  </ImageView>
                   <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Charts" />
                </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="30.0" />
                </padding>
             </HBox>
-            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="200.0" spacing="5.0">
+            <HBox fx:id="mPanels" alignment="CENTER_LEFT" onMouseClicked="#onMenuClicked" prefHeight="50.0" prefWidth="200.0" spacing="5.0" styleClass="menu-item">
                <children>
-                  <FontAwesomeIconView fill="#908f8f" glyphName="HOME" size="20">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </FontAwesomeIconView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-show-sidepanel-G.png" />
+                     </image>
+                  </ImageView>
                   <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Panels" />
                </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="30.0" />
                </padding>
             </HBox>
-            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="200.0" spacing="5.0">
+            <HBox fx:id="mIcons" alignment="CENTER_LEFT" onMouseClicked="#onMenuClicked" prefHeight="50.0" prefWidth="200.0" spacing="5.0" styleClass="menu-item">
                <children>
-                  <FontAwesomeIconView fill="#908f8f" glyphName="HOME" size="20">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </FontAwesomeIconView>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Notifications" />
-               </children>
-               <padding>
-                  <Insets left="10.0" />
-               </padding>
-            </HBox>
-            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="200.0" spacing="5.0">
-               <children>
-                  <FontAwesomeIconView fill="#908f8f" glyphName="HOME" size="20">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </FontAwesomeIconView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-xlarge-icons-G.png" />
+                     </image>
+                  </ImageView>
                   <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Icons" />
                </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="30.0" />
                </padding>
             </HBox>
-            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="200.0" spacing="5.0">
+            <HBox fx:id="mNotif" alignment="CENTER_LEFT" onMouseClicked="#onMenuClicked" prefHeight="50.0" prefWidth="200.0" spacing="5.0" styleClass="menu-item">
                <children>
-                  <FontAwesomeIconView fill="#908f8f" glyphName="HOME" size="20">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </FontAwesomeIconView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-alarm-G.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Notifications" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </HBox>
+            <HBox fx:id="mSetting" alignment="CENTER_LEFT" onMouseClicked="#onMenuClicked" prefHeight="50.0" prefWidth="200.0" spacing="5.0" styleClass="menu-item">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8-automatic-G.png" />
+                     </image>
+                  </ImageView>
                   <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings" />
                </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
                <padding>
-                  <Insets left="10.0" />
+                  <Insets left="30.0" />
                </padding>
             </HBox>
          </children>
       </VBox>
+      <HBox id="top-bar" alignment="CENTER_LEFT" layoutX="207.0" prefHeight="80.0" prefWidth="792.0" spacing="5.0">
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+      </HBox>
    </children>
 </AnchorPane>
