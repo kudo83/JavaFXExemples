@@ -1,11 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
 
 <AnchorPane id="AnchorPane" prefHeight="665.0" prefWidth="1067.0" stylesheets="@../style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="practiceproject.dashboard.DashboardController">
    <children>
-      <VBox layoutY="-6.0" prefHeight="672.0" prefWidth="200.0" styleClass="sideBar" />
+      <VBox layoutY="-6.0" prefHeight="672.0" prefWidth="200.0" styleClass="sideBar">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <FontAwesomeIconView fill="#908f8f" glyphName="HOME" size="20">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <FontAwesomeIconView fill="#908f8f" glyphName="SEARCH" size="20">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <JFXTextField text="Search" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <MaterialDesignIconView glyphName="HOME_OUTLINE" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Tables" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <FontAwesomeIconView fill="#908f8f" glyphName="HOME" size="20">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Charts" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <FontAwesomeIconView fill="#908f8f" glyphName="HOME" size="20">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Panels" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <FontAwesomeIconView fill="#908f8f" glyphName="HOME" size="20">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Notifications" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <FontAwesomeIconView fill="#908f8f" glyphName="HOME" size="20">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Icons" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <FontAwesomeIconView fill="#908f8f" glyphName="HOME" size="20">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
