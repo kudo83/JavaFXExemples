@@ -47,11 +47,11 @@ public class LoginController implements Initializable {
     @FXML
     private void onMenuAction(ActionEvent event) {
         BtnSignIn.getStyleClass().removeAll("menu-item-selected");
-        BtnSignUp.getStyleClass().removeAll("menuButtonSelected");
+        BtnSignUp.getStyleClass().removeAll("menu-item-selected");
 
         if (event.getSource() == BtnSignIn) {
-            BtnSignIn.getStyleClass().add("menu-item");
-            BtnSignUp.getStyleClass().add("menu-item-selected");
+            BtnSignIn.getStyleClass().add("menu-item-selected");
+            BtnSignUp.getStyleClass().add("menu-item");
             signInPane.toFront();
 
         } else {
@@ -71,7 +71,10 @@ public class LoginController implements Initializable {
             Stage Window = (Stage)((Node)event.getSource()).getScene().getWindow();
             Window.setTitle("Dashboard");
             Window.setScene(dashScene);
+            dashPane.requestFocus();
+            Window.setMaximized(true);
             Window.show();
+             
         } catch (IOException ex) {
             Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
         }

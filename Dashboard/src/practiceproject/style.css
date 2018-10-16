@@ -11,30 +11,34 @@ and open the template in the editor.
 
 
 
-
 .menu-item{
-    
-    -fx-background-color:transparent;
     -fx-background-image: none;
-    -fx-text-fill:#CCCCCC;
+    -fx-background-color:transparent;
+    -fx-text-fill:#AAAAAA;
     -fx-font-size: 15px;
-   
+    -fx-alignment: CENTER_LEFT;
+
 }
 .menu-item-selected {
+    -fx-background-color:transparent;
     -fx-background-image: url("../practiceproject/icons/side.png");
     -fx-background-repeat: no-repeat;
     -fx-font-size: 15px;
-    -fx-text-fill:red;
-  
+    -fx-alignment: CENTER_LEFT;
+    -fx-text-fill:white;
+
+
 }
 .menu-item:hover{
     -fx-background-color: #5E5F61;
+    -fx-background-image: url("../practiceproject/icons/side.png");
+    -fx-background-repeat: no-repeat;
 }
 
 
 
 .sideBar{
-    
+
     -fx-background-color: #2C323E;
 }
 .logo{
@@ -42,11 +46,11 @@ and open the template in the editor.
     -fx-font-size: 30px;
 }
 .dashLogo{
-       -fx-font-family :  'Yesteryear', cursive;
-        -fx-font-size: 25px;
-       -fx-background-color: #02ABF5;
+    -fx-font-family :  'Yesteryear', cursive;
+    -fx-font-size: 25px;
+    -fx-background-color: #02ABF5;
 }
 
 #top-bar{
-     -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,10 );
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,10 );
 }

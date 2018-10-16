@@ -3,8 +3,6 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.Group?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -16,158 +14,142 @@
 <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: white;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practiceproject.dashboard.DashboardController">
    <children>
       <HBox prefHeight="100.0" prefWidth="200.0" />
-      <Group />
-      <VBox prefHeight="666.0" prefWidth="200.0" styleClass="sideBar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox id="sidebar" fx:id="vBox" maxWidth="200.0" prefHeight="666.0" prefWidth="200.0" styleClass="sideBar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" spacing="10.0" styleClass="dashLogo">
+            <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" styleClass="dashLogo">
                <children>
-                  <FontAwesomeIconView fill="WHITE" glyphName="SEND_ALT" size="30" />
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN" wrappingWidth="136.82034301757812">
+                  <FontAwesomeIconView fill="WHITE" glyphName="SEND_ALT" size="30">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></FontAwesomeIconView>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN" wrappingWidth="124.15365600585938">
                      <font>
                         <Font name="Segoe UI Light" size="28.0" />
                      </font>
-                  </Text>
-               </children>
-               <padding>
-                  <Insets left="30.0" />
-               </padding>
-            </HBox>
-            <HBox fx:id="mDash" alignment="CENTER_LEFT" onMouseClicked="#onMenuClicked" prefHeight="50.0" prefWidth="200.0" spacing="5.0" styleClass="menu-item-selected">
-               <children>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/home-page-G.png" />
-                     </image>
-                  </ImageView>
-                  <JFXButton styleClass="menu-item" />
-               </children>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-               <padding>
-                  <Insets left="30.0" />
-               </padding>
-            </HBox>
-            <HBox fx:id="mSearch" alignment="CENTER_LEFT" onMouseClicked="#onMenuClicked" prefHeight="50.0" prefWidth="200.0" spacing="5.0" styleClass="menu-item">
-               <children>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/icons8-search-filled-G.png" />
-                     </image>
-                  </ImageView>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Search" />
-                  <Label text="Label" />
-               </children>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-               <padding>
-                  <Insets left="30.0" />
-               </padding>
-            </HBox>
-            <HBox fx:id="mTables" alignment="CENTER_LEFT" onMouseClicked="#onMenuClicked" prefHeight="50.0" prefWidth="200.0" spacing="5.0" styleClass="menu-item">
-               <children>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/icons8-show-sidepanel-G.png" />
-                     </image>
-                  </ImageView>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Tables">
                      <HBox.margin>
-                        <Insets />
+                        <Insets left="10.0" />
                      </HBox.margin>
                   </Text>
                </children>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
                <padding>
                   <Insets left="30.0" />
                </padding>
             </HBox>
-            <HBox fx:id="mCharts" alignment="CENTER_LEFT" onMouseClicked="#onMenuClicked" prefHeight="50.0" prefWidth="200.0" spacing="5.0" styleClass="menu-item">
+            <HBox prefHeight="47.0" prefWidth="207.0">
                <children>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/icons8-chart-G.png" />
-                     </image>
-                  </ImageView>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Charts" />
+                  <JFXButton fx:id="btnDash" onAction="#onMenuAction" prefHeight="47.0" prefWidth="206.0" styleClass="menu-item-selected" text="Dashboard" textFill="#ebe6e6">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/home-page-G.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </JFXButton>
                </children>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-               <padding>
-                  <Insets left="30.0" />
-               </padding>
             </HBox>
-            <HBox fx:id="mPanels" alignment="CENTER_LEFT" onMouseClicked="#onMenuClicked" prefHeight="50.0" prefWidth="200.0" spacing="5.0" styleClass="menu-item">
+            <HBox prefHeight="47.0" prefWidth="207.0">
                <children>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/icons8-show-sidepanel-G.png" />
-                     </image>
-                  </ImageView>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Panels" />
+                  <JFXButton fx:id="btnSearch" onAction="#onMenuAction" prefHeight="47.0" prefWidth="206.0" styleClass="menu-item" text="Search" textFill="#ebe6e6">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/icons8-search-filled-G.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </JFXButton>
                </children>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-               <padding>
-                  <Insets left="30.0" />
-               </padding>
             </HBox>
-            <HBox fx:id="mIcons" alignment="CENTER_LEFT" onMouseClicked="#onMenuClicked" prefHeight="50.0" prefWidth="200.0" spacing="5.0" styleClass="menu-item">
+            <HBox prefHeight="47.0" prefWidth="207.0">
                <children>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/icons8-xlarge-icons-G.png" />
-                     </image>
-                  </ImageView>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Icons" />
+                  <JFXButton fx:id="btnTables" onAction="#onMenuAction" prefHeight="47.0" prefWidth="206.0" styleClass="menu-item" text="Tables" textFill="#ebe6e6">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/icons8-data-sheet-filled-G.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </JFXButton>
                </children>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-               <padding>
-                  <Insets left="30.0" />
-               </padding>
             </HBox>
-            <HBox fx:id="mNotif" alignment="CENTER_LEFT" onMouseClicked="#onMenuClicked" prefHeight="50.0" prefWidth="200.0" spacing="5.0" styleClass="menu-item">
+            <HBox prefHeight="47.0" prefWidth="207.0">
                <children>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/icons8-alarm-G.png" />
-                     </image>
-                  </ImageView>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Notifications" />
+                  <JFXButton fx:id="btnPanels" onAction="#onMenuAction" prefHeight="47.0" prefWidth="206.0" styleClass="menu-item" text="Panels" textFill="#ebe6e6">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/icons8-show-sidepanel-G.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </JFXButton>
                </children>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-               <padding>
-                  <Insets left="30.0" />
-               </padding>
             </HBox>
-            <HBox fx:id="mSetting" alignment="CENTER_LEFT" onMouseClicked="#onMenuClicked" prefHeight="50.0" prefWidth="200.0" spacing="5.0" styleClass="menu-item">
+            <HBox prefHeight="47.0" prefWidth="207.0">
                <children>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/icons8-automatic-G.png" />
-                     </image>
-                  </ImageView>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings" />
+                  <JFXButton fx:id="btnIcons" onAction="#onMenuAction" prefHeight="47.0" prefWidth="206.0" styleClass="menu-item" text="Icons" textFill="#ebe6e6">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/icons8-xlarge-icons-G.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </JFXButton>
                </children>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-               <padding>
-                  <Insets left="30.0" />
-               </padding>
+            </HBox>
+            <HBox prefHeight="47.0" prefWidth="207.0">
+               <children>
+                  <JFXButton fx:id="btnNotifications" onAction="#onMenuAction" prefHeight="47.0" prefWidth="206.0" styleClass="menu-item" text="Notifications" textFill="#ebe6e6">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/icons8-alarm-G.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox prefHeight="47.0" prefWidth="207.0">
+               <children>
+                  <JFXButton fx:id="btnSettings" onAction="#onMenuAction" prefHeight="47.0" prefWidth="206.0" styleClass="menu-item" text="Settings" textFill="#ebe6e6">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/icons8-automatic-G.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </JFXButton>
+               </children>
             </HBox>
          </children>
       </VBox>
-      <HBox id="top-bar" alignment="CENTER_LEFT" layoutX="207.0" prefHeight="80.0" prefWidth="792.0" spacing="5.0">
+      <HBox id="top-bar" alignment="CENTER_LEFT" layoutX="200.0" prefHeight="80.0" prefWidth="799.0" spacing="5.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
          <padding>
             <Insets left="30.0" />
          </padding>

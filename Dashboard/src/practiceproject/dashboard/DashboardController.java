@@ -5,13 +5,16 @@
  */
 package practiceproject.dashboard;
 
+import com.jfoenix.controls.JFXButton;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 /**
  * FXML Controller class
@@ -20,22 +23,23 @@ import javafx.scene.layout.HBox;
  */
 public class DashboardController implements Initializable {
 
+ 
     @FXML
-    private HBox mDash;
+    private JFXButton btnDash;
     @FXML
-    private HBox mSearch;
+    private JFXButton btnSearch;
     @FXML
-    private HBox mTables;
+    private VBox vBox;
     @FXML
-    private HBox mCharts;
+    private JFXButton btnTables;
     @FXML
-    private HBox mPanels;
+    private JFXButton btnPanels;
     @FXML
-    private HBox mIcons;
+    private JFXButton btnIcons;
     @FXML
-    private HBox mNotif;
+    private JFXButton btnNotifications;
     @FXML
-    private HBox mSetting;
+    private JFXButton btnSettings;
 
     /**
      * Initializes the controller class.
@@ -46,15 +50,19 @@ public class DashboardController implements Initializable {
     }
 
     @FXML
-    private void onMenuClicked(MouseEvent event) {
+    private void onMenuAction(ActionEvent event) {
 
-        for (HBox box : Arrays.asList(mDash, mSearch, mTables, mCharts, mPanels, mIcons, mNotif, mSetting)) {
-            box.getStyleClass().removeAll("menu-item-selected");
-            if (event.getSource() == box) {
-                box.getStyleClass().add("menu-item-selected");
+        for (JFXButton btn : Arrays.asList(btnDash, btnSearch,btnTables,btnPanels,btnIcons,btnNotifications,btnSettings)) {
+            if (event.getSource() == btn) {
+                btn.getStyleClass().removeAll("menu-item");
+                btn.getStyleClass().add("menu-item-selected");
                 
+            }else{
+                btn.getStyleClass().removeAll("menu-item-selected");
+                btn.getStyleClass().add("menu-item");
             }
 
         }
     }
+
 }
