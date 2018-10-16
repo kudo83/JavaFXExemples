@@ -15,12 +15,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
+import practiceproject.Practiceproject;
 
 /**
  *
@@ -65,14 +64,14 @@ public class LoginController implements Initializable {
     @FXML
     private void onLogin(ActionEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../dashborad/Dashbord.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.initStyle(StageStyle.UNDECORATED);
-            stage.setTitle("Dashboard");
-            stage.setScene(new Scene(root1));
-            stage.show();
+          
+            AnchorPane dashPane = FXMLLoader.load(Practiceproject.class.getResource("dashboard/Dashboard.fxml"));
+            Scene dashScene = new Scene(dashPane);
+            
+            Stage Window = (Stage)((Node)event.getSource()).getScene().getWindow();
+            Window.setTitle("Dashboard");
+            Window.setScene(dashScene);
+            Window.show();
         } catch (IOException ex) {
             Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
         }
