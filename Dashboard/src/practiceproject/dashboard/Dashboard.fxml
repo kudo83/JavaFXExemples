@@ -3,6 +3,11 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -11,30 +16,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: white;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practiceproject.dashboard.DashboardController">
+<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="1000.0" style="-fx-background-color: white;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practiceproject.dashboard.DashboardController">
    <children>
       <HBox prefHeight="100.0" prefWidth="200.0" />
-      <VBox id="sidebar" fx:id="vBox" maxWidth="200.0" prefHeight="666.0" prefWidth="200.0" styleClass="sideBar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox id="sidebar" fx:id="vBox" maxWidth="200.0" prefHeight="666.0" prefWidth="200.0" styleClass="sideBar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="80.0">
          <children>
-            <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" styleClass="dashLogo">
-               <children>
-                  <FontAwesomeIconView fill="WHITE" glyphName="SEND_ALT" size="30">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin></FontAwesomeIconView>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN" wrappingWidth="124.15365600585938">
-                     <font>
-                        <Font name="Segoe UI Light" size="28.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin>
-                  </Text>
-               </children>
-               <padding>
-                  <Insets left="30.0" />
-               </padding>
-            </HBox>
             <HBox prefHeight="47.0" prefWidth="207.0">
                <children>
                   <JFXButton fx:id="btnDash" onAction="#onMenuAction" prefHeight="47.0" prefWidth="206.0" styleClass="menu-item-selected" text="Dashboard" textFill="#ebe6e6">
@@ -149,10 +135,66 @@
             </HBox>
          </children>
       </VBox>
-      <HBox id="top-bar" alignment="CENTER_LEFT" layoutX="200.0" prefHeight="80.0" prefWidth="799.0" spacing="5.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
-         <padding>
-            <Insets left="30.0" />
-         </padding>
-      </HBox>
+      <AnchorPane prefHeight="80.0" prefWidth="1000.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" styleClass="dashLogo" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <FontAwesomeIconView fill="#727272" glyphName="SEND_ALT" size="30">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Text fill="#727272" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN" wrappingWidth="124.15365600585938">
+                     <font>
+                        <Font name="Segoe UI Light" size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </HBox>
+            <JFXButton layoutX="362.0" layoutY="28.0" style="-fx-background-color: #009FE7;" text="Search" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" />
+               </graphic>
+            </JFXButton>
+            <TextField layoutX="213.0" layoutY="28.0" />
+            <HBox alignment="CENTER_RIGHT" layoutX="750.0" prefHeight="80.0" prefWidth="340.0" spacing="20.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <FontAwesomeIconView fill="#727272" glyphName="BELL" size="20" />
+                  <FontAwesomeIconView fill="#727272" glyphName="GEAR" size="20" />
+                  <HBox alignment="CENTER" prefHeight="80.0" prefWidth="144.0" spacing="5.0">
+                     <children>
+                        <ImageView fitHeight="34.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/aissam.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="AISSAM" textFill="#727272" />
+                        <MenuButton mnemonicParsing="false">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Action 1" />
+                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                          </items>
+                        </MenuButton>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+         </children>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" color="#00000076" height="10.0" radius="7.25" />
+         </effect>
+      </AnchorPane>
    </children>
 </AnchorPane>

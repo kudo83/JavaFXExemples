@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="627.0" prefWidth="798.0" style="-fx-background-color: #2A303B;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practiceproject.login.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="627.0" prefWidth="798.0" style="-fx-background-color: #2A303B;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practiceproject.login.LoginController">
     <children>
       <AnchorPane fx:id="signUpPane" layoutX="438.0" prefHeight="633.0" prefWidth="365.0" style="-fx-background-color: #2B333E;">
          <children>
@@ -83,7 +83,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="BtnSignUp" onAction="#onMenuAction" prefHeight="40.0" prefWidth="138.0" styleClass="menu-item" stylesheets="@../style/style.css" text="Sign UP" textFill="WHITE" />
+            <JFXButton fx:id="BtnSignUp" onAction="#onMenuAction" prefHeight="40.0" prefWidth="138.0" styleClass="menu-item" text="Sign UP" textFill="WHITE" />
          </children>
       </VBox>
     </children>

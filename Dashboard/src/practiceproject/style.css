@@ -17,6 +17,7 @@ and open the template in the editor.
     -fx-text-fill:#AAAAAA;
     -fx-font-size: 15px;
     -fx-alignment: CENTER_LEFT;
+    
 
 }
 .menu-item-selected {
@@ -26,8 +27,6 @@ and open the template in the editor.
     -fx-font-size: 15px;
     -fx-alignment: CENTER_LEFT;
     -fx-text-fill:white;
-
-
 }
 .menu-item:hover{
     -fx-background-color: #5E5F61;
@@ -48,9 +47,11 @@ and open the template in the editor.
 .dashLogo{
     -fx-font-family :  'Yesteryear', cursive;
     -fx-font-size: 25px;
-    -fx-background-color: #02ABF5;
+     -fx-text-fill:#575757;
+    -fx-background-color: white;
 }
 
-#top-bar{
-    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,10 );
+#topbar{
+    -fx-background-insets: 12;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
 }
