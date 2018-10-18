@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
@@ -175,12 +175,6 @@
                            </image>
                         </ImageView>
                         <Label text="AISSAM" textFill="#727272" />
-                        <MenuButton mnemonicParsing="false">
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Action 1" />
-                            <MenuItem mnemonicParsing="false" text="Action 2" />
-                          </items>
-                        </MenuButton>
                      </children>
                   </HBox>
                </children>
@@ -196,5 +190,11 @@
             <DropShadow blurType="ONE_PASS_BOX" color="#00000076" height="10.0" radius="7.25" />
          </effect>
       </AnchorPane>
+      <JFXDrawer />
+      <ScrollPane fx:id="scrollPane" fitToWidth="true" layoutX="200.0" layoutY="80.0" prefHeight="521.0" prefWidth="903.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+        <content>
+          <AnchorPane fx:id="contentPane" minHeight="0.0" minWidth="0.0" prefHeight="518.0" prefWidth="796.0" />
+        </content>
+      </ScrollPane>
    </children>
 </AnchorPane>

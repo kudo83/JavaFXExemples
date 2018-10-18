@@ -6,14 +6,18 @@
 package practiceproject.dashboard;
 
 import com.jfoenix.controls.JFXButton;
+import java.io.IOException;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.HBox;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 
 /**
@@ -40,6 +44,10 @@ public class DashboardController implements Initializable {
     private JFXButton btnNotifications;
     @FXML
     private JFXButton btnSettings;
+    @FXML
+    private AnchorPane contentPane;
+    @FXML
+    private ScrollPane scrollPane;
 
     /**
      * Initializes the controller class.
@@ -56,6 +64,18 @@ public class DashboardController implements Initializable {
             if (event.getSource() == btn) {
                 btn.getStyleClass().removeAll("menu-item");
                 btn.getStyleClass().add("menu-item-selected");
+                
+                
+                if (btn == btnDash){
+                    try {
+                        AnchorPane OverviewPane = FXMLLoader.load(getClass().getResource("Overview.fxml"));
+                        
+                        contentPane.getChildren().setAll(OverviewPane);
+                        scrollPane.setMinSize(contentPane.getMaxWidth(), contentPane.getMaxHeight());
+                    } catch (IOException ex) {
+                        Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
                 
             }else{
                 btn.getStyleClass().removeAll("menu-item-selected");
