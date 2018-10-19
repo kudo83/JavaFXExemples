@@ -71,7 +71,9 @@ public class DashboardController implements Initializable {
                         AnchorPane OverviewPane = FXMLLoader.load(getClass().getResource("Overview.fxml"));
                         
                         contentPane.getChildren().setAll(OverviewPane);
-                        scrollPane.setMinSize(contentPane.getMaxWidth(), contentPane.getMaxHeight());
+                        contentPane.setMinWidth(OverviewPane.getMinWidth());
+                        contentPane.setMinHeight(OverviewPane.getMinHeight());
+                        
                     } catch (IOException ex) {
                         Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);
                     }
