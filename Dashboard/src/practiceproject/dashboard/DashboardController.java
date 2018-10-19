@@ -64,6 +64,7 @@ public class DashboardController implements Initializable {
             if (event.getSource() == btn) {
                 btn.getStyleClass().removeAll("menu-item");
                 btn.getStyleClass().add("menu-item-selected");
+                btn.getGraphic().setStyle("-fx-fill: #04AEFF;");
                 
                 
                 if (btn == btnDash){
@@ -82,6 +83,7 @@ public class DashboardController implements Initializable {
             }else{
                 btn.getStyleClass().removeAll("menu-item-selected");
                 btn.getStyleClass().add("menu-item");
+                btn.getGraphic().setStyle("-fx-fill: #AAAAAA;");
             }
 
         }
