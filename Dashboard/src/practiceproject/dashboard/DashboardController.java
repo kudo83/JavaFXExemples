@@ -54,7 +54,13 @@ public class DashboardController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
+                  try {
+                        openMenuContent("btnDash.fxml");
+                    } catch (IOException ex) {
+                        Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                
     }
 
     @FXML
@@ -66,15 +72,10 @@ public class DashboardController implements Initializable {
                 btn.getStyleClass().add("menu-item-selected");
                 btn.getGraphic().setStyle("-fx-fill: #04AEFF;");
                 
-                
-                if (btn == btnDash){
+                 
+                if (btn == event.getSource()){
                     try {
-                        AnchorPane OverviewPane = FXMLLoader.load(getClass().getResource("Overview.fxml"));
-                        
-                        contentPane.getChildren().setAll(OverviewPane);
-                        contentPane.setMinWidth(OverviewPane.getMinWidth());
-                        contentPane.setMinHeight(OverviewPane.getMinHeight());
-                        
+                        openMenuContent(btn.getId().toString()+".fxml");
                     } catch (IOException ex) {
                         Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);
                     }
@@ -88,5 +89,19 @@ public class DashboardController implements Initializable {
 
         }
     }
-
+    
+    
+    private void openMenuContent(String pane) throws IOException{
+          
+           try {
+                        AnchorPane OverviewPane = FXMLLoader.load(getClass().getResource(pane));
+                        
+                        contentPane.getChildren().setAll(OverviewPane);
+                        contentPane.setMinWidth(OverviewPane.getMinWidth());
+                        contentPane.setMinHeight(OverviewPane.getMinHeight());
+                        
+                    } catch (IOException ex) {
+                        Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+    }
 }
