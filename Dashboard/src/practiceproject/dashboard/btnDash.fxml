@@ -16,17 +16,17 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="contentPane" minHeight="900.0" minWidth="993.0" prefHeight="962.0" prefWidth="1010.0" style="-fx-background-color: #F6F5FC;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="contentPane" minHeight="900.0" minWidth="993.0" prefHeight="1047.0" prefWidth="1010.0" style="-fx-background-color: #F6F5FC;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practiceproject.dashboard.DashFirstController">
    <children>
       <Pane layoutX="72.0" layoutY="28.0" prefHeight="582.0" prefWidth="866.0" style="-fx-background-color: white;">
          <children>
-            <Text layoutX="33.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monthly Overview">
+            <Text layoutX="33.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weekly Overview">
                <font>
                   <Font size="18.0" />
                </font>
             </Text>
-            <Text fill="#838181" layoutX="79.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OCT 2018" />
-            <AreaChart layoutX="33.0" layoutY="166.0" prefHeight="402.0" prefWidth="619.0">
+            <Text fill="#838181" layoutX="79.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OCT14,2018" />
+            <AreaChart fx:id="areaChart" layoutX="33.0" layoutY="166.0" prefHeight="402.0" prefWidth="619.0">
               <xAxis>
                 <CategoryAxis side="BOTTOM" />
               </xAxis>
@@ -34,7 +34,7 @@
                 <NumberAxis side="LEFT" />
               </yAxis>
             </AreaChart>
-            <HBox alignment="CENTER" layoutX="33.0" layoutY="65.0" prefHeight="73.0" prefWidth="800.0" spacing="30.0">
+            <HBox alignment="CENTER" layoutX="33.0" layoutY="65.0" minWidth="800.0" prefHeight="73.0" prefWidth="800.0" spacing="30.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="boxBorder">
                      <children>
@@ -131,7 +131,7 @@
                </children>
             </HBox>
             <Text fill="#838181" layoutX="33.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Period:" />
-            <VBox alignment="CENTER_RIGHT" layoutX="667.0" layoutY="193.0" prefHeight="98.0" prefWidth="185.0">
+            <VBox alignment="CENTER_RIGHT" layoutX="652.0" layoutY="193.0" prefHeight="98.0" prefWidth="185.0">
                <children>
                   <HBox alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="185.0" spacing="15.0">
                      <children>
@@ -150,11 +150,53 @@
                         </Label>
                      </children>
                   </HBox>
-                  <Label graphicTextGap="20.0" styleClass="boxText" text="Total Rents" textFill="#6b6868">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Label>
+                  <Label styleClass="boxText" text="Total Billed Days" />
+               </children>
+            </VBox>
+            <Text fill="#838181" layoutX="154.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OCT14,2018" />
+            <Text fill="#838181" layoutX="146.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+            <VBox alignment="CENTER_RIGHT" layoutX="648.0" layoutY="318.0" prefHeight="98.0" prefWidth="185.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="185.0" spacing="15.0">
+                     <children>
+                        <Label graphicTextGap="20.0" styleClass="boxText" text="\$26,584" textFill="#6b6868">
+                           <font>
+                              <Font name="Century Gothic" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label graphicTextGap="3.0" styleClass="boxText" text="12%" textFill="#6b6868">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="#12b24a" glyphName="CARET_UP" size="20" text="" />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label styleClass="boxText" text="Monthly Income" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_RIGHT" layoutX="652.0" layoutY="428.0" prefHeight="98.0" prefWidth="185.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="185.0" spacing="15.0">
+                     <children>
+                        <Label graphicTextGap="20.0" styleClass="boxText" text="\$97,356" textFill="#6b6868">
+                           <font>
+                              <Font name="Century Gothic" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label graphicTextGap="3.0" styleClass="boxText" text="12%" textFill="#6b6868">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="#fc0606" glyphName="CARET_DOWN" size="20" />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label styleClass="boxText" text="Total Income" />
                </children>
             </VBox>
          </children>
@@ -162,6 +204,6 @@
             <DropShadow color="#0000002a" height="7.66" radius="5.1825" width="15.07" />
          </effect>
       </Pane>
-      <JFXTreeTableView layoutX="139.0" layoutY="692.0" prefHeight="298.0" prefWidth="500.0" />
+      <JFXTreeTableView layoutX="72.0" layoutY="693.0" prefHeight="298.0" prefWidth="500.0" />
    </children>
 </AnchorPane>

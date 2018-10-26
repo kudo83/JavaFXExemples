@@ -16,6 +16,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
@@ -48,6 +49,7 @@ public class DashboardController implements Initializable {
     private AnchorPane contentPane;
     @FXML
     private ScrollPane scrollPane;
+    
 
     /**
      * Initializes the controller class.
@@ -104,4 +106,7 @@ public class DashboardController implements Initializable {
                         Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);
                     }
     }
+    
+    
+   
 }
