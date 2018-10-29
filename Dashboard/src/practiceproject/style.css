@@ -17,7 +17,7 @@ and open the template in the editor.
     -fx-text-fill:#AAAAAA;
     -fx-font-size: 15px;
     -fx-alignment: CENTER_LEFT;
-    
+
 
 }
 .menu-item-selected {
@@ -28,7 +28,7 @@ and open the template in the editor.
     -fx-font-weight: bold;
     -fx-alignment: CENTER_LEFT;
     -fx-text-fill:white;
-    
+
 }
 .menu-item:hover{
     -fx-background-color: #5E5F61;
@@ -49,13 +49,13 @@ and open the template in the editor.
 .dashLogo{
     -fx-font-family :  'Yesteryear', cursive;
     -fx-font-size: 25px;
-     -fx-text-fill:#575757;
+    -fx-text-fill:#575757;
     -fx-background-color: white;
 }
 
 #topbar{
     -fx-background-insets: 12;
-  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
 }
 
 #notif-lbl{
@@ -64,10 +64,33 @@ and open the template in the editor.
 }
 
 .boxBorder{
-    
+
     -fx-border-color:  #F2F2F2;
 }
 
 .boxText{
-   -fx-text-fill:  #5C5C5C; 
+    -fx-text-fill:  #5C5C5C; 
+}
+
+.default-color0.chart-series-area-fill{
+    -fx-fill : #DBEDF9;
+
+}
+.default-color0.chart-series-area-line{
+    -fx-stroke: #0A83BF;
+}
+
+.default-color0.chart-area-symbol {
+    -fx-background-color:#0A83BF;
+}
+
+#profileArrow :hover{
+    -fx-text-fill:#0A83BF;
+}
+
+.glyph-icon-p{
+    -fx-fill: #727272;
+}
+.glyph-icon-p:hover{
+    -fx-fill: #04AEFF;
 }

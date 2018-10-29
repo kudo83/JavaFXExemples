@@ -4,7 +4,9 @@
 <?import com.jfoenix.controls.JFXDrawer?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
@@ -16,7 +18,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="1000.0" style="-fx-background-color: white;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practiceproject.dashboard.DashboardController">
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="601.0" prefWidth="1000.0" style="-fx-background-color: white;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practiceproject.dashboard.DashboardController">
    <children>
       <HBox prefHeight="100.0" prefWidth="200.0" />
       <VBox id="sidebar" fx:id="vBox" maxWidth="200.0" prefHeight="666.0" prefWidth="200.0" styleClass="sideBar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="80.0">
@@ -119,7 +121,7 @@
                         <Insets />
                      </HBox.margin>
                   </FontAwesomeIconView>
-                  <Text fill="#727272" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN" wrappingWidth="124.15365600585938">
+                  <Text fill="#727272" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="129.15365600585938">
                      <font>
                         <Font name="Segoe UI Light" size="28.0" />
                      </font>
@@ -132,7 +134,7 @@
                   <Insets left="30.0" />
                </padding>
             </HBox>
-            <JFXButton layoutX="362.0" layoutY="28.0" style="-fx-background-color: #009FE7;" text="Search" textFill="WHITE">
+            <JFXButton layoutX="377.0" layoutY="28.0" style="-fx-background-color: #009FE7;" text="Search" textFill="WHITE">
                <graphic>
                   <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" />
                </graphic>
@@ -147,7 +149,18 @@
                         <Image url="@../icons/aissam.png" />
                      </image>
                   </ImageView>
-                  <Label text="AISSAM" textFill="#727272" />
+                  <Label id="profilelbl" fx:id="profileLabel" contentDisplay="RIGHT" onMouseClicked="#onClickProfile" text="AISSAM" textFill="#727272">
+                     <graphic>
+                        <FontAwesomeIconView id="profileArrow" glyphName="ANGLE_DOWN" size="15" styleClass="glyph-icon-p" />
+                     </graphic>
+                     <contextMenu>
+                        <ContextMenu fx:id="contextProfile">
+                          <items>
+                            <MenuItem fx:id="menuProfile" mnemonicParsing="false" onAction="#onProfileSelected" text="Profile" />
+                              <MenuItem fx:id="menuSignOut" mnemonicParsing="false" onAction="#onSignOutSelected" text="Sign Out" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu></Label>
                </children>
             </HBox>
             <Label id="notif-lbl" alignment="CENTER" layoutX="826.0" layoutY="26.0" prefHeight="17.0" prefWidth="17.0" text="3" textFill="#fcfcfc" />

@@ -45,7 +45,7 @@
                         </ImageView>
                         <VBox alignment="CENTER" prefHeight="89.0" prefWidth="85.0">
                            <children>
-                              <Label graphicTextGap="20.0" styleClass="boxText" text="1258" textFill="#6b6868">
+                              <Label fx:id="accounts" graphicTextGap="20.0" styleClass="boxText" text="1258" textFill="#6b6868">
                                  <font>
                                     <Font name="Century Gothic" size="30.0" />
                                  </font>
@@ -68,7 +68,7 @@
                         </ImageView>
                         <VBox alignment="CENTER" prefHeight="89.0" prefWidth="85.0">
                            <children>
-                              <Label graphicTextGap="20.0" styleClass="boxText" text="532">
+                              <Label fx:id="rentals" graphicTextGap="20.0" styleClass="boxText" text="532">
                                  <font>
                                     <Font name="Century Gothic" size="30.0" />
                                  </font>
@@ -91,7 +91,7 @@
                         </ImageView>
                         <VBox alignment="CENTER" prefHeight="89.0" prefWidth="85.0">
                            <children>
-                              <Label graphicTextGap="20.0" styleClass="boxText" text="3450" textFill="#6b6868">
+                              <Label fx:id="visits" graphicTextGap="20.0" styleClass="boxText" text="3450" textFill="#6b6868">
                                  <font>
                                     <Font name="Century Gothic" size="30.0" />
                                  </font>
@@ -114,7 +114,7 @@
                         </ImageView>
                         <VBox alignment="CENTER" prefHeight="89.0" prefWidth="85.0">
                            <children>
-                              <Label graphicTextGap="20.0" styleClass="boxText" text="32%">
+                              <Label fx:id="conversions" graphicTextGap="20.0" styleClass="boxText" text="32%">
                                  <font>
                                     <Font name="Century Gothic" size="30.0" />
                                  </font>
@@ -135,7 +135,7 @@
                <children>
                   <HBox alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="185.0" spacing="15.0">
                      <children>
-                        <Label graphicTextGap="20.0" styleClass="boxText" text="3450" textFill="#6b6868">
+                        <Label fx:id="billedDays" graphicTextGap="20.0" styleClass="boxText" text="3450" textFill="#6b6868">
                            <font>
                               <Font name="Century Gothic" size="30.0" />
                            </font>
@@ -159,7 +159,7 @@
                <children>
                   <HBox alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="185.0" spacing="15.0">
                      <children>
-                        <Label graphicTextGap="20.0" styleClass="boxText" text="\$26,584" textFill="#6b6868">
+                        <Label fx:id="monthIncome" graphicTextGap="20.0" styleClass="boxText" text="\$26,584" textFill="#6b6868">
                            <font>
                               <Font name="Century Gothic" size="30.0" />
                            </font>
@@ -181,7 +181,7 @@
                <children>
                   <HBox alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="185.0" spacing="15.0">
                      <children>
-                        <Label graphicTextGap="20.0" styleClass="boxText" text="\$97,356" textFill="#6b6868">
+                        <Label fx:id="totalIncome" graphicTextGap="20.0" styleClass="boxText" text="\$97,356" textFill="#6b6868">
                            <font>
                               <Font name="Century Gothic" size="30.0" />
                            </font>
