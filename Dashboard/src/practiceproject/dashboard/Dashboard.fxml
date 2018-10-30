@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXDrawer?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.ContextMenu?>
@@ -18,9 +17,66 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" fx:id="rootPane" minHeight="805.0" minWidth="1010.0" prefHeight="805.0" prefWidth="1010.0" style="-fx-background-color: white;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practiceproject.dashboard.DashboardController">
+<AnchorPane id="AnchorPane" fx:id="rootPane" minHeight="805.0" minWidth="1210.0" prefHeight="805.0" prefWidth="1010.0" style="-fx-background-color: white;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practiceproject.dashboard.DashboardController">
    <children>
       <HBox prefHeight="100.0" prefWidth="200.0" />
+      <AnchorPane minWidth="1250.0" prefWidth="1250.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="80.0" prefWidth="200.0" styleClass="dashLogo" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <FontAwesomeIconView fill="#727272" glyphName="SEND_ALT" size="30">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Text fill="#727272" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="129.15365600585938">
+                     <font>
+                        <Font name="Segoe UI Light" size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <JFXButton layoutX="407.0" layoutY="28.0" style="-fx-background-color: #009FE7;" text="Search" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" />
+               </graphic>
+            </JFXButton>
+            <TextField layoutX="213.0" layoutY="28.0" />
+            <FontAwesomeIconView fill="#727272" glyphName="BELL" layoutX="998.0" layoutY="51.0" size="20" AnchorPane.rightAnchor="192.0" />
+            <FontAwesomeIconView fill="#727272" glyphName="GEAR" layoutX="1041.0" layoutY="51.0" size="20" AnchorPane.rightAnchor="151.8571434020996" />
+            <HBox alignment="CENTER" layoutX="1059.0" layoutY="5.0" prefHeight="80.0" prefWidth="144.0" spacing="5.0" AnchorPane.rightAnchor="7.0">
+               <children>
+                  <ImageView fitHeight="34.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/aissam.png" />
+                     </image>
+                  </ImageView>
+                  <Label id="profilelbl" fx:id="profileLabel" contentDisplay="RIGHT" onMouseClicked="#onClickProfile" text="AISSAM" textFill="#727272">
+                     <graphic>
+                        <FontAwesomeIconView id="profileArrow" glyphName="ANGLE_DOWN" size="15" styleClass="glyph-icon-p" />
+                     </graphic>
+                     <contextMenu>
+                        <ContextMenu fx:id="contextProfile">
+                          <items>
+                            <MenuItem fx:id="menuProfile" mnemonicParsing="false" onAction="#onProfileSelected" text="Profile" />
+                              <MenuItem fx:id="menuSignOut" mnemonicParsing="false" onAction="#onSignOutSelected" text="Sign Out" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu></Label>
+               </children>
+            </HBox>
+            <Label id="notif-lbl" alignment="CENTER" layoutX="1008.0" layoutY="30.0" prefHeight="15.0" prefWidth="15.0" text="3" textFill="#fcfcfc" AnchorPane.rightAnchor="187.0">
+               <font>
+                  <Font size="10.0" />
+               </font></Label>
+         </children>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" color="#00000076" height="10.0" radius="7.25" />
+         </effect>
+      </AnchorPane>
       <VBox id="sidebar" fx:id="vBox" maxWidth="200.0" prefHeight="725.0" prefWidth="200.0" styleClass="sideBar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="80.0">
          <children>
             <HBox prefHeight="47.0" prefWidth="207.0">
@@ -112,67 +168,6 @@
             </HBox>
          </children>
       </VBox>
-      <AnchorPane minWidth="1200.0" prefWidth="1200.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" styleClass="dashLogo" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <FontAwesomeIconView fill="#727272" glyphName="SEND_ALT" size="30">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </FontAwesomeIconView>
-                  <Text fill="#727272" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="129.15365600585938">
-                     <font>
-                        <Font name="Segoe UI Light" size="28.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin>
-                  </Text>
-               </children>
-               <padding>
-                  <Insets left="30.0" />
-               </padding>
-            </HBox>
-            <JFXButton layoutX="407.0" layoutY="28.0" style="-fx-background-color: #009FE7;" text="Search" textFill="WHITE">
-               <graphic>
-                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" />
-               </graphic>
-            </JFXButton>
-            <TextField layoutX="213.0" layoutY="28.0" />
-            <FontAwesomeIconView fill="#727272" glyphName="BELL" layoutX="817.0" layoutY="49.0" size="20" />
-            <FontAwesomeIconView fill="#727272" glyphName="GEAR" layoutX="847.0" layoutY="48.0" size="20" />
-            <HBox alignment="CENTER" layoutX="856.0" layoutY="2.0" prefHeight="80.0" prefWidth="144.0" spacing="5.0">
-               <children>
-                  <ImageView fitHeight="34.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/aissam.png" />
-                     </image>
-                  </ImageView>
-                  <Label id="profilelbl" fx:id="profileLabel" contentDisplay="RIGHT" onMouseClicked="#onClickProfile" text="AISSAM" textFill="#727272">
-                     <graphic>
-                        <FontAwesomeIconView id="profileArrow" glyphName="ANGLE_DOWN" size="15" styleClass="glyph-icon-p" />
-                     </graphic>
-                     <contextMenu>
-                        <ContextMenu fx:id="contextProfile">
-                          <items>
-                            <MenuItem fx:id="menuProfile" mnemonicParsing="false" onAction="#onProfileSelected" text="Profile" />
-                              <MenuItem fx:id="menuSignOut" mnemonicParsing="false" onAction="#onSignOutSelected" text="Sign Out" />
-                          </items>
-                        </ContextMenu>
-                     </contextMenu></Label>
-               </children>
-            </HBox>
-            <Label id="notif-lbl" alignment="CENTER" layoutX="826.0" layoutY="26.0" prefHeight="15.0" prefWidth="15.0" text="3" textFill="#fcfcfc">
-               <font>
-                  <Font size="10.0" />
-               </font></Label>
-         </children>
-         <effect>
-            <DropShadow blurType="ONE_PASS_BOX" color="#00000076" height="10.0" radius="7.25" />
-         </effect>
-      </AnchorPane>
-      <JFXDrawer />
       <ScrollPane fx:id="scrollPane" fitToWidth="true" hmax="0.0" layoutX="200.0" layoutY="80.0" prefHeight="521.0" prefWidth="903.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
         <content>
           <AnchorPane fx:id="contentPane" minHeight="0.0" minWidth="0.0" prefHeight="724.0" prefWidth="791.0" style="-fx-background-color: #F6F5FC;" />

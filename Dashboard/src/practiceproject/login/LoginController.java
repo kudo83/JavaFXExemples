@@ -6,6 +6,8 @@
 package practiceproject.login;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXPasswordField;
+import com.jfoenix.controls.JFXTextField;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -17,9 +19,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import practiceproject.Practiceproject;
+import practiceproject.helpers.DashBoardHelper;
 
 /**
  *
@@ -37,10 +41,17 @@ public class LoginController implements Initializable {
     private AnchorPane signUpPane;
     @FXML
     private JFXButton loginBtn;
+    @FXML
+    private JFXTextField userName;
+    @FXML
+    private JFXPasswordField password;
+    @FXML
+    private JFXPasswordField confirmPassword;
+    @FXML
+    private JFXTextField email;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
 
     }
 
@@ -63,20 +74,51 @@ public class LoginController implements Initializable {
 
     @FXML
     private void onLogin(ActionEvent event) {
+        //Login form validation
+
+//        if ()
         try {
-          
+
             AnchorPane dashPane = FXMLLoader.load(Practiceproject.class.getResource("dashboard/Dashboard.fxml"));
             Scene dashScene = new Scene(dashPane);
-            
-            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setTitle("Dashboard");
             window.setScene(dashScene);
             dashPane.requestFocus();
-            window.setMaximized(true);
+//            window.setMaximized(true);
             window.show();
-             
+
         } catch (IOException ex) {
             Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    @FXML
+    private void onSignUp(ActionEvent event) {
+        if (email.getText().isEmpty()) {
+            DashBoardHelper.showAlert(Alert.AlertType.ERROR, signUpPane.getScene().getWindow(), "Form Error!", "Please enter your email!");
+            return;
+        }
+        if (!DashBoardHelper.isValidEmailAddress(email.getText())) {
+            DashBoardHelper.showAlert(Alert.AlertType.ERROR, signUpPane.getScene().getWindow(), "Form Error!", "Please enter a valid email!");
+            return;
+        }
+        if (userName.getText().isEmpty()) {
+            DashBoardHelper.showAlert(Alert.AlertType.ERROR, signUpPane.getScene().getWindow(), "Form Error!", "Please enter your username!");
+            return;
+        }
+        if (password.getText().isEmpty()) {
+            DashBoardHelper.showAlert(Alert.AlertType.ERROR, signUpPane.getScene().getWindow(), "Form Error!", "Please enter your password!");
+            return;
+        }
+        if (confirmPassword.getText().isEmpty()) {
+            DashBoardHelper.showAlert(Alert.AlertType.ERROR, signUpPane.getScene().getWindow(), "Form Error!", "Please enter your password confirmation!");
+            return;
+        }
+        if (!(password.getText()).equals(confirmPassword.getText())) {
+            DashBoardHelper.showAlert(Alert.AlertType.ERROR, signUpPane.getScene().getWindow(), "Form Error!", "password confirmation doesn't match password!");
+            return;
         }
     }
 

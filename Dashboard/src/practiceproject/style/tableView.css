@@ -93,7 +93,7 @@
 
 .table-row-cell:filled:hover {
     /*Allows Row Hover Effect. See https://material.io/design/components/data-tables.html#behavior*/
-    -fx-background: #EEEEEE;
+    -fx-background: #DBEDF9;
 }
 
 
@@ -127,24 +127,29 @@
 /* Default Alignment. We'll just assume its text until you say otherwise.
    See: https://material.io/guidelines/components/data-tables.html#data-tables-structure */
 .table-view .table-column {
-    -fx-alignment: CENTER-LEFT;
+/*    -fx-alignment: CENTER-LEFT;*/
+ -fx-alignment: CENTER;
     -fx-background-insets: 0px;
 }
 
 .table-view .table-column > .label {
     /* Aligns the header label */
-    -fx-alignment: CENTER-LEFT;
+    /*-fx-alignment: CENTER-LEFT;*/
+    -fx-alignment: CENTER;
  }
 
 /* Add this style class to columns containing text to make them left aligned.
    See: https://material.io/guidelines/components/data-tables.html#data-tables-structure */
  .text-column {
-     -fx-alignment: CENTER-LEFT !important;
+     /*-fx-alignment: CENTER-LEFT !important;*/
+       -fx-alignment: CENTER !important;
  }
 
  .text-column > .label {
     /* Aligns the header label */
-    -fx-alignment: CENTER-LEFT;
+    /*-fx-alignment: CENTER-LEFT;*/
+     -fx-alignment: CENTER;
+      -fx-text-alignment: CENTER;
  }
 
  /* Add this style class to columns containing numbers to make them right aligned.

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
@@ -8,40 +9,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="627.0" prefWidth="798.0" style="-fx-background-color: #2A303B;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practiceproject.login.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="627.0" prefWidth="798.0" style="-fx-background-color: #2A303B;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practiceproject.login.LoginController">
     <children>
-      <AnchorPane fx:id="signUpPane" layoutX="438.0" prefHeight="633.0" prefWidth="365.0" style="-fx-background-color: #2B333E;">
-         <children>
-            <Text fill="WHITE" layoutX="123.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: 'Yesteryear', cursive; -fx-font-size: 35;" text="Sign Up" wrappingWidth="167.8203125">
-               <font>
-                  <Font name="Arial Black" size="26.0" />
-               </font>
-            </Text>
-            <MaterialDesignIconView fill="#02abf5" glyphName="ACCOUNT_PLUS" layoutX="75.0" layoutY="93.0" size="30" />
-            <JFXTextField focusColor="#fcfcfc" layoutX="53.0" layoutY="320.0" prefHeight="25.0" prefWidth="226.0" style="-fx-text-fill: white;" />
-            <JFXTextField focusColor="#fcfcfc" layoutX="53.0" layoutY="238.0" prefHeight="25.0" prefWidth="226.0" style="-fx-text-fill: white;" />
-            <Label layoutX="54.0" layoutY="213.0" text="USER NAME" textFill="#ababab" />
-            <Label layoutX="54.0" layoutY="292.0" text="PASSWORD" textFill="#ababab" />
-            <JFXButton layoutX="69.0" layoutY="446.0" prefHeight="40.0" prefWidth="226.0" style="-fx-background-color: #02ABF5;" text="SIGNUP" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </JFXButton>
-            <JFXButton layoutX="69.0" layoutY="503.0" prefHeight="40.0" prefWidth="226.0" style="-fx-background-color: #E3AE3E;" text="HAVE ACCOUNT? SIGNIN NOW" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </JFXButton>
-            <JFXTextField focusColor="#fcfcfc" layoutX="53.0" layoutY="388.0" prefHeight="25.0" prefWidth="226.0" style="-fx-text-fill: white;" />
-            <Label layoutX="54.0" layoutY="360.0" text="CONFIRM PASSWORD" textFill="#ababab" />
-            <JFXTextField focusColor="#fcfcfc" layoutX="53.0" layoutY="172.0" prefHeight="25.0" prefWidth="226.0" style="-fx-text-fill: white;" />
-            <Label layoutX="54.0" layoutY="147.0" text="EMAIL" textFill="#ababab" />
-         </children>
-      </AnchorPane>
       <Pane layoutX="136.0" prefHeight="633.0" prefWidth="302.0" style="-fx-background-color: #242B35;" styleClass="#242B35">
          <children>
             <FontAwesomeIconView fill="WHITE" glyphName="SEND_ALT" layoutX="111.0" layoutY="323.0" size="80" />
@@ -51,6 +23,12 @@
                </font>
             </Text>
          </children></Pane>
+      <JFXButton fx:id="BtnSignIn" layoutY="272.0" onAction="#onMenuAction" prefHeight="40.0" prefWidth="138.0" styleClass="menu-item-selected" stylesheets="@../style.css" text="Sign In" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="BtnSignUp" layoutY="312.0" onAction="#onMenuAction" prefHeight="40.0" prefWidth="138.0" styleClass="menu-item" text="Sign UP" textFill="WHITE" />
       <AnchorPane fx:id="signInPane" layoutX="438.0" layoutY="-2.0" maxHeight="627.0" maxWidth="364.0" minHeight="627.0" minWidth="364.0" prefHeight="627.0" prefWidth="364.0" style="-fx-background-color: #2B333E;">
          <children>
             <Text fill="WHITE" layoutX="118.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: 'Yesteryear', cursive; -fx-font-size: 35;" text="Sign In" wrappingWidth="167.8203125">
@@ -60,8 +38,8 @@
             </Text>
             <MaterialDesignIconView fill="#02abf5" glyphName="ACCOUNT_KEY" layoutX="70.0" layoutY="129.0" size="30" />
             <JFXTextField focusColor="#fcfcfc" layoutX="53.0" layoutY="322.0" prefHeight="25.0" prefWidth="226.0" style="-fx-text-fill: white;" />
-            <JFXTextField focusColor="#fcfcfc" layoutX="53.0" layoutY="232.0" prefHeight="25.0" prefWidth="226.0" style="-fx-text-fill: white;" />
-            <Hyperlink layoutX="182.0" layoutY="360.0" prefHeight="23.0" prefWidth="108.0" text="Forgot Password?" textFill="#808080" />
+            <JFXTextField fx:id="userName" focusColor="#fcfcfc" layoutX="53.0" layoutY="232.0" prefHeight="25.0" prefWidth="226.0" style="-fx-text-fill: white;" />
+            <Hyperlink layoutX="152.0" layoutY="360.0" prefHeight="29.0" prefWidth="138.0" text="Forgot Password?" textFill="#808080" />
             <Label layoutX="54.0" layoutY="207.0" text="USER NAME" textFill="#ababab" />
             <Label layoutX="54.0" layoutY="294.0" text="PASSWORD" textFill="#ababab" />
             <JFXButton fx:id="loginBtn" layoutX="69.0" layoutY="448.0" onAction="#onLogin" prefHeight="40.0" prefWidth="226.0" style="-fx-background-color: #02ABF5;" text="LOGIN" textFill="WHITE">
@@ -76,15 +54,33 @@
             </JFXButton>
          </children>
       </AnchorPane>
-      <VBox prefHeight="511.0" prefWidth="138.0">
+      <AnchorPane fx:id="signUpPane" layoutX="438.0" prefHeight="633.0" prefWidth="365.0" style="-fx-background-color: #2B333E;">
          <children>
-            <JFXButton fx:id="BtnSignIn" onAction="#onMenuAction" prefHeight="40.0" prefWidth="138.0" styleClass="menu-item-selected" stylesheets="@../style.css" text="Sign In" textFill="WHITE">
+            <Text fill="WHITE" layoutX="123.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: 'Yesteryear', cursive; -fx-font-size: 35;" text="Sign Up" wrappingWidth="167.8203125">
+               <font>
+                  <Font name="Arial Black" size="26.0" />
+               </font>
+            </Text>
+            <MaterialDesignIconView fill="#02abf5" glyphName="ACCOUNT_PLUS" layoutX="75.0" layoutY="93.0" size="30" />
+            <Label layoutX="54.0" layoutY="213.0" text="USER NAME" textFill="#ababab" />
+            <Label layoutX="54.0" layoutY="292.0" text="PASSWORD" textFill="#ababab" />
+            <JFXButton layoutX="69.0" layoutY="446.0" onAction="#onSignUp" prefHeight="40.0" prefWidth="226.0" style="-fx-background-color: #02ABF5;" text="SIGNUP" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="BtnSignUp" onAction="#onMenuAction" prefHeight="40.0" prefWidth="138.0" styleClass="menu-item" text="Sign UP" textFill="WHITE" />
+            <JFXButton layoutX="69.0" layoutY="503.0" prefHeight="40.0" prefWidth="226.0" style="-fx-background-color: #E3AE3E;" text="HAVE ACCOUNT? SIGNIN NOW" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="54.0" layoutY="360.0" text="CONFIRM PASSWORD" textFill="#ababab" />
+            <JFXTextField fx:id="email" focusColor="#fcfcfc" layoutX="53.0" layoutY="172.0" prefHeight="25.0" prefWidth="226.0" style="-fx-text-fill: white;" />
+            <Label layoutX="54.0" layoutY="147.0" text="EMAIL" textFill="#ababab" />
+            <JFXTextField fx:id="userName" focusColor="#fcfcfc" layoutX="53.0" layoutY="248.0" prefHeight="25.0" prefWidth="226.0" style="-fx-text-fill: white;" />
+            <JFXPasswordField fx:id="password" layoutX="54.0" layoutY="317.0" prefHeight="31.0" prefWidth="226.0" style="-fx-text-fill: white;" />
+            <JFXPasswordField fx:id="confirmPassword" layoutX="53.0" layoutY="396.0" prefHeight="31.0" prefWidth="226.0" style="-fx-text-fill: white;" />
          </children>
-      </VBox>
+      </AnchorPane>
     </children>
 </AnchorPane>
