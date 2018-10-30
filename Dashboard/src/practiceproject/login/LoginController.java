@@ -72,7 +72,7 @@ public class LoginController implements Initializable {
             Window.setTitle("Dashboard");
             Window.setScene(dashScene);
             dashPane.requestFocus();
-            Window.setMaximized(true);
+//            Window.setMaximized(true);
             Window.show();
              
         } catch (IOException ex) {

@@ -18,7 +18,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="601.0" prefWidth="1000.0" style="-fx-background-color: white;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practiceproject.dashboard.DashboardController">
+<AnchorPane id="AnchorPane" fx:id="rootPane" minHeight="805.0" minWidth="1010.0" prefHeight="805.0" prefWidth="1010.0" style="-fx-background-color: white;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practiceproject.dashboard.DashboardController">
    <children>
       <HBox prefHeight="100.0" prefWidth="200.0" />
       <VBox id="sidebar" fx:id="vBox" maxWidth="200.0" prefHeight="666.0" prefWidth="200.0" styleClass="sideBar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="80.0">
@@ -112,7 +112,7 @@
             </HBox>
          </children>
       </VBox>
-      <AnchorPane prefHeight="80.0" prefWidth="1000.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane minWidth="1010.0" prefHeight="80.0" prefWidth="1000.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="200.0" styleClass="dashLogo" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
@@ -134,7 +134,7 @@
                   <Insets left="30.0" />
                </padding>
             </HBox>
-            <JFXButton layoutX="377.0" layoutY="28.0" style="-fx-background-color: #009FE7;" text="Search" textFill="WHITE">
+            <JFXButton layoutX="407.0" layoutY="28.0" style="-fx-background-color: #009FE7;" text="Search" textFill="WHITE">
                <graphic>
                   <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" />
                </graphic>
@@ -163,7 +163,10 @@
                      </contextMenu></Label>
                </children>
             </HBox>
-            <Label id="notif-lbl" alignment="CENTER" layoutX="826.0" layoutY="26.0" prefHeight="17.0" prefWidth="17.0" text="3" textFill="#fcfcfc" />
+            <Label id="notif-lbl" alignment="CENTER" layoutX="826.0" layoutY="26.0" prefHeight="15.0" prefWidth="15.0" text="3" textFill="#fcfcfc">
+               <font>
+                  <Font size="10.0" />
+               </font></Label>
          </children>
          <effect>
             <DropShadow blurType="ONE_PASS_BOX" color="#00000076" height="10.0" radius="7.25" />
@@ -172,7 +175,7 @@
       <JFXDrawer />
       <ScrollPane fx:id="scrollPane" fitToWidth="true" hmax="0.0" layoutX="200.0" layoutY="80.0" prefHeight="521.0" prefWidth="903.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
         <content>
-          <AnchorPane fx:id="contentPane" minHeight="0.0" minWidth="0.0" prefHeight="518.0" prefWidth="785.0" style="-fx-background-color: #F6F5FC;" />
+          <AnchorPane fx:id="contentPane" minHeight="0.0" minWidth="0.0" prefHeight="724.0" prefWidth="791.0" style="-fx-background-color: #F6F5FC;" />
         </content>
       </ScrollPane>
    </children>
