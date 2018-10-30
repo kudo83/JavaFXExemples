@@ -12,12 +12,14 @@ import java.util.Arrays;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
@@ -132,26 +134,14 @@ public class DashboardController implements Initializable {
         AnchorPane profilePane = FXMLLoader.load(Practiceproject.class.getResource("profile/Profile.fxml"));
         Scene scene = new Scene(profilePane);
 
-        Stage Window = new Stage();
-        Window.setTitle("Profile");
-        Window.setScene(scene);
-        Window.show();
+        Stage window = new Stage();
+        window.setTitle("Profile");
+        window.setScene(scene);
+        window.show();
     }
 
     @FXML
     private void onSignOutSelected(ActionEvent event) {
-        try {
-            AnchorPane loginPane = FXMLLoader.load(Practiceproject.class.getResource("login/Login.fxml"));
-            Scene LoginScene = new Scene(loginPane);
-            
-            Stage Window = (Stage) (rootPane.getScene().getWindow());
-            Window.setTitle("Login");
-            Window.setScene(LoginScene);
-            Window.setMaximized(false);
-            Window.show();
-        } catch (IOException ex) {
-            Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        System.exit(0);
     }
-
 }

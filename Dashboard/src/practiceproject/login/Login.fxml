@@ -51,7 +51,7 @@
                </font>
             </Text>
          </children></Pane>
-      <AnchorPane fx:id="signInPane" layoutX="438.0" layoutY="-2.0" prefHeight="627.0" prefWidth="364.0" style="-fx-background-color: #2B333E;">
+      <AnchorPane fx:id="signInPane" layoutX="438.0" layoutY="-2.0" maxHeight="627.0" maxWidth="364.0" minHeight="627.0" minWidth="364.0" prefHeight="627.0" prefWidth="364.0" style="-fx-background-color: #2B333E;">
          <children>
             <Text fill="WHITE" layoutX="118.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: 'Yesteryear', cursive; -fx-font-size: 35;" text="Sign In" wrappingWidth="167.8203125">
                <font>

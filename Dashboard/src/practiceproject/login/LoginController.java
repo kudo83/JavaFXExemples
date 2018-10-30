@@ -68,12 +68,12 @@ public class LoginController implements Initializable {
             AnchorPane dashPane = FXMLLoader.load(Practiceproject.class.getResource("dashboard/Dashboard.fxml"));
             Scene dashScene = new Scene(dashPane);
             
-            Stage Window = (Stage)((Node)event.getSource()).getScene().getWindow();
-            Window.setTitle("Dashboard");
-            Window.setScene(dashScene);
+            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+            window.setTitle("Dashboard");
+            window.setScene(dashScene);
             dashPane.requestFocus();
-//            Window.setMaximized(true);
-            Window.show();
+            window.setMaximized(true);
+            window.show();
              
         } catch (IOException ex) {
             Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
