@@ -22,6 +22,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
 import practiceproject.Practiceproject;
 import practiceproject.helpers.DashBoardHelper;
 
@@ -100,7 +102,7 @@ public class LoginController implements Initializable {
             DashBoardHelper.showAlert(Alert.AlertType.ERROR, signUpPane.getScene().getWindow(), "Form Error!", "Please enter your email!");
             return;
         }
-        if (!DashBoardHelper.isValidEmailAddress(email.getText())) {
+        if (!isValidEmailAddress(email.getText())) {
             DashBoardHelper.showAlert(Alert.AlertType.ERROR, signUpPane.getScene().getWindow(), "Form Error!", "Please enter a valid email!");
             return;
         }
@@ -120,6 +122,17 @@ public class LoginController implements Initializable {
             DashBoardHelper.showAlert(Alert.AlertType.ERROR, signUpPane.getScene().getWindow(), "Form Error!", "password confirmation doesn't match password!");
             return;
         }
+    }
+    
+    public  boolean isValidEmailAddress(String email) {
+        boolean result = true;
+        try {
+            InternetAddress emailAddr = new InternetAddress(email);
+            emailAddr.validate();
+        } catch (AddressException ex) {
+            result = false;
+        }
+        return result;
     }
 
 }
