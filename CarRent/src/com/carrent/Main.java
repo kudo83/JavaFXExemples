@@ -23,6 +23,7 @@ public class Main extends Application {
         
         Scene scene = new Scene(root);
         
+         scene.getStylesheets().add("https://fonts.googleapis.com/css?family=Yesteryear");
         stage.setScene(scene);
         stage.show();
     }
