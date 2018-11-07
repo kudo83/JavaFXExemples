@@ -5,12 +5,15 @@
  */
 package com.carrent.controller;
 
+import com.jfoenix.controls.JFXPasswordField;
+import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
 
 /**
  *
@@ -18,18 +21,48 @@ import javafx.scene.control.Label;
  */
 public class LoginController implements Initializable {
     
+  
     @FXML
-    private Label label;
-    
+    private JFXTextField userName;
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
+    private JFXPasswordField password;
+    @FXML
+    private JFXTextField userNameRegister;
+    @FXML
+    private JFXPasswordField confirmPass;
+    @FXML
+    private JFXTextField email;
+    @FXML
+    private JFXPasswordField passRegister;
+   
+    @FXML
+    private Pane signInPane;
+    @FXML
+    private Pane signUpPane;
     
+      
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void onLogin(ActionEvent event) {
+    }
+
+    @FXML
+    private void onSignUpNow(ActionEvent event) {
+        signUpPane.toFront();
+    }
+
+    @FXML
+    private void onSignUp(ActionEvent event) {
+       
+    }
+
+    @FXML
+    private void onSignInNow(ActionEvent event) {
+        signInPane.toFront();
+    }
     
 }
