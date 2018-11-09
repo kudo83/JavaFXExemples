@@ -12,6 +12,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 
@@ -57,6 +58,14 @@ public class LoginController implements Initializable {
 
     @FXML
     private void onSignUp(ActionEvent event) {
+        
+        if (email.getText().isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Form Error!");
+            alert.setContentText("Please enter your email!");
+            
+            
+        }
        
     }
 
