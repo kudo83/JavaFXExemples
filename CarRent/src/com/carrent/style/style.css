@@ -9,6 +9,62 @@ and open the template in the editor.
 */
 
 .yesteryear-text{
-     -fx-font-family :  'Yesteryear', cursive;
-     -fx-font-size: 40px;
+    -fx-font-family :  'Yesteryear', cursive;
+    -fx-font-size: 40px;
+}
+
+.root{
+    -fx-background-color: white;
+}
+.sidebar{
+    -fx-background-color: #2C323E;
+}
+.dashlogo{
+
+    -fx-text-fill: white;
+    -fx-font-size : 25px;
+      -fx-font-family :  'Yesteryear', cursive;
+}
+.searchInput{
+    -fx-border-radius:  10 10 10 10;
+    -fx-background-radius:  10 10 10 10;
+    -fx-background-color: transparent;
+    -fx-border-color:white;
+    -fx-prompt-text-fill:gray;
+}
+
+.menu-item{
+    -fx-background-image: none;
+    -fx-text-fill:#AAAAAA;
+    -fx-font-size: 15px;
+    -fx-alignment: CENTER_LEFT;
+
+
+}
+.menu-item:hover{
+    -fx-background-color: #5E5F61;
+    -fx-background-image: url("../image/side.png");
+    -fx-background-repeat: no-repeat;
+}
+.menu-item-selected {
+    -fx-background-image: url("../image/side.png");
+    -fx-background-repeat: no-repeat;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+    -fx-text-fill:white;
+}
+
+.glyph{
+    -fx-fill:#AAAAAA;
+}
+.glyph--selected{
+    -fx-fill: #04AEFF;
+}
+#notif-lbl{
+    -fx-background-radius: 100%;
+    -fx-background-color : #FF5252;
+    -fx-text-fill: white;
+
+    
 }

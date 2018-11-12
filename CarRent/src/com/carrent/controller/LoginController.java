@@ -5,6 +5,8 @@
  */
 package com.carrent.controller;
 
+import com.carrent.helper.LoginHelper;
+import com.carrent.model.User;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
@@ -21,8 +23,7 @@ import javafx.scene.layout.Pane;
  * @author Aissam
  */
 public class LoginController implements Initializable {
-    
-  
+
     @FXML
     private JFXTextField userName;
     @FXML
@@ -35,17 +36,16 @@ public class LoginController implements Initializable {
     private JFXTextField email;
     @FXML
     private JFXPasswordField passRegister;
-   
+
     @FXML
     private Pane signInPane;
     @FXML
     private Pane signUpPane;
-    
-      
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void onLogin(ActionEvent event) {
@@ -58,20 +58,43 @@ public class LoginController implements Initializable {
 
     @FXML
     private void onSignUp(ActionEvent event) {
-        
-        if (email.getText().isEmpty()){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Form Error!");
-            alert.setContentText("Please enter your email!");
-            
-            
+
+        if (email.getText().isEmpty()) {
+            LoginHelper.showAlert(Alert.AlertType.ERROR, "Form Error!", "Please enter your email!", signUpPane.getScene().getWindow());
+            return;
         }
-       
+        if (!LoginHelper.isValidEmailAddress(email.getText())) {
+            LoginHelper.showAlert(Alert.AlertType.ERROR, "Form Error!", "Please enter a valid Email!", signUpPane.getScene().getWindow());
+            return;
+        }
+
+        if (userNameRegister.getText().isEmpty()) {
+            LoginHelper.showAlert(Alert.AlertType.ERROR, "Form Error!", "Please enter your user name!", signUpPane.getScene().getWindow());
+            return;
+        }
+        if (passRegister.getText().isEmpty()) {
+            LoginHelper.showAlert(Alert.AlertType.ERROR, "Form Error!", "Please enter your password!", signUpPane.getScene().getWindow());
+            return;
+        }
+        if (confirmPass.getText().isEmpty()) {
+            LoginHelper.showAlert(Alert.AlertType.ERROR, "Form Error!", "Please enter your confirmation password!", signUpPane.getScene().getWindow());
+            return;
+        }
+        if (!(passRegister.getText().equals(confirmPass.getText()))) {
+            LoginHelper.showAlert(Alert.AlertType.ERROR, "Form Error!", "password confirmation doesn't match password!", signUpPane.getScene().getWindow());
+            return;
+        }
+        
+        User newUser = new User(userNameRegister.getText(),email.getText(),passRegister.getText()) ;
+        
+        //This is where you call the service to persisit the user OBJECT in the data base
+        System.out.println("Email:"+newUser.getEmail()+"   User name:"+newUser.getUserName()+ "   Password:"+newUser.getPassword() );
+
     }
 
     @FXML
     private void onSignInNow(ActionEvent event) {
         signInPane.toFront();
     }
-    
+
 }

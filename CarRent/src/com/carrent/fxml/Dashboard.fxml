@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.carrent.controller.DashboardController">
+   <children>
+      <VBox prefHeight="800.0" prefWidth="200.0" styleClass="sidebar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label id="dashlogo" alignment="CENTER" prefHeight="90.0" prefWidth="200.0" styleClass="dashlogo" text="Car Rents">
+               <graphic>
+                  <ImageView fitHeight="79.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/logo%20(2).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+            <TextField promptText="Search" styleClass="searchInput">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </TextField>
+            <JFXButton prefHeight="40.0" prefWidth="200.0" styleClass="menu-item-selected" text="Home">
+               <graphic>
+                  <FontAwesomeIconView glyphName="HOME" size="25" styleClass="glyph--selected" />
+               </graphic>
+            </JFXButton>
+            <JFXButton prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Dashbord">
+               <graphic>
+                  <FontAwesomeIconView glyphName="HOME" size="25" styleClass="glyph" />
+               </graphic>
+            </JFXButton>
+            <JFXButton prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Dashbord">
+               <graphic>
+                  <FontAwesomeIconView glyphName="HOME" size="25" styleClass="glyph" />
+               </graphic>
+            </JFXButton>
+            <JFXButton prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Dashbord">
+               <graphic>
+                  <FontAwesomeIconView glyphName="HOME" size="25" styleClass="glyph" />
+               </graphic>
+            </JFXButton>
+            <JFXButton prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Dashbord">
+               <graphic>
+                  <FontAwesomeIconView glyphName="HOME" size="25" styleClass="glyph" />
+               </graphic>
+            </JFXButton>
+            <JFXButton prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Dashbord">
+               <graphic>
+                  <FontAwesomeIconView glyphName="HOME" size="25" styleClass="glyph" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+      <VBox layoutX="200.0" layoutY="-1.0" prefHeight="800.0" prefWidth="1008.0">
+         <children>
+            <AnchorPane prefHeight="102.0" prefWidth="1008.0" style="-fx-background-color: white;">
+               <effect>
+                  <DropShadow color="#00000067" height="10.0" radius="4.5" width="10.0" />
+               </effect>
+               <children>
+                  <FontAwesomeIconView fill="#727272" glyphName="BELL" layoutX="781.0" layoutY="55.0" size="20" />
+                  <FontAwesomeIconView fill="#727272" glyphName="GEAR" layoutX="822.0" layoutY="54.0" size="20" />
+                  <Label id="notif-lbl" alignment="CENTER" layoutX="789.0" layoutY="30.0" prefHeight="17.0" prefWidth="17.0" text="10" />
+               </children>
+            </AnchorPane>
+         </children></VBox>
+   </children>
+</AnchorPane>
