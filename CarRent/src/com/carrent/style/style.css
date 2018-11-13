@@ -31,6 +31,7 @@ and open the template in the editor.
     -fx-background-color: transparent;
     -fx-border-color:white;
     -fx-prompt-text-fill:gray;
+    -fx-text-fill: white;
 }
 
 .menu-item{

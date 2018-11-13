@@ -37,43 +37,53 @@
                   <FontAwesomeIconView glyphName="HOME" size="25" styleClass="glyph--selected" />
                </graphic>
             </JFXButton>
-            <JFXButton prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Dashbord">
+            <JFXButton graphicTextGap="8.0" prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Clients">
                <graphic>
-                  <FontAwesomeIconView glyphName="HOME" size="25" styleClass="glyph" />
+                  <FontAwesomeIconView glyphName="USERS" size="20" styleClass="glyph" />
                </graphic>
             </JFXButton>
-            <JFXButton prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Dashbord">
+            <JFXButton graphicTextGap="6.0" prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Vehicles">
                <graphic>
-                  <FontAwesomeIconView glyphName="HOME" size="25" styleClass="glyph" />
+                  <FontAwesomeIconView glyphName="CAR" size="20" styleClass="glyph" />
                </graphic>
             </JFXButton>
-            <JFXButton prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Dashbord">
+            <JFXButton prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Reservations">
                <graphic>
-                  <FontAwesomeIconView glyphName="HOME" size="25" styleClass="glyph" />
+                  <FontAwesomeIconView glyphName="KEY" size="25" styleClass="glyph" />
                </graphic>
             </JFXButton>
-            <JFXButton prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Dashbord">
+            <JFXButton graphicTextGap="12.0" prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Invoices">
                <graphic>
-                  <FontAwesomeIconView glyphName="HOME" size="25" styleClass="glyph" />
+                  <FontAwesomeIconView glyphName="FILE_TEXT_ALT" size="20" styleClass="glyph" />
                </graphic>
             </JFXButton>
-            <JFXButton prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Dashbord">
+            <JFXButton graphicTextGap="10.0" prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Planner">
                <graphic>
-                  <FontAwesomeIconView glyphName="HOME" size="25" styleClass="glyph" />
+                  <FontAwesomeIconView glyphName="CALENDAR" size="20" styleClass="glyph" />
                </graphic>
             </JFXButton>
          </children>
       </VBox>
-      <VBox layoutX="200.0" layoutY="-1.0" prefHeight="800.0" prefWidth="1008.0">
+      <VBox layoutX="200.0" layoutY="-1.0" prefHeight="800.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane prefHeight="102.0" prefWidth="1008.0" style="-fx-background-color: white;">
                <effect>
                   <DropShadow color="#00000067" height="10.0" radius="4.5" width="10.0" />
                </effect>
                <children>
-                  <FontAwesomeIconView fill="#727272" glyphName="BELL" layoutX="781.0" layoutY="55.0" size="20" />
-                  <FontAwesomeIconView fill="#727272" glyphName="GEAR" layoutX="822.0" layoutY="54.0" size="20" />
-                  <Label id="notif-lbl" alignment="CENTER" layoutX="789.0" layoutY="30.0" prefHeight="17.0" prefWidth="17.0" text="10" />
+                  <FontAwesomeIconView fill="#727272" glyphName="BELL" layoutX="800.0" layoutY="58.0" size="20" AnchorPane.rightAnchor="180.0" />
+                  <FontAwesomeIconView fill="#727272" glyphName="GEAR" layoutX="841.0" layoutY="57.0" size="20" AnchorPane.rightAnchor="141.8571434020996" />
+                  <Label id="notif-lbl" alignment="CENTER" layoutX="808.0" layoutY="33.0" prefHeight="17.0" prefWidth="17.0" text="10" AnchorPane.rightAnchor="175.0" />
+                  <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="884.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="76.0">
+                     <image>
+                        <Image url="@../image/lady.png" />
+                     </image>
+                  </ImageView>
+                  <Label contentDisplay="RIGHT" layoutX="931.0" layoutY="42.0" text="Isobel" AnchorPane.rightAnchor="23.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="ANGLE_DOWN" size="15" />
+                     </graphic>
+                  </Label>
                </children>
             </AnchorPane>
          </children></VBox>
