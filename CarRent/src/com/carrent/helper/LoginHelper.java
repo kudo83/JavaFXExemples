@@ -5,8 +5,6 @@
  */
 package com.carrent.helper;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.scene.control.Alert;
 import javafx.stage.Window;
 import javax.mail.internet.AddressException;
