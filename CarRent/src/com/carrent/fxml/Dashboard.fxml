@@ -4,6 +4,7 @@
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
@@ -86,6 +87,11 @@
                   </Label>
                </children>
             </AnchorPane>
+            <ScrollPane prefHeight="698.0" prefWidth="1000.0">
+              <content>
+                <AnchorPane fx:id="contentPane" minHeight="0.0" minWidth="0.0" prefHeight="695.0" prefWidth="998.0" />
+              </content>
+            </ScrollPane>
          </children></VBox>
    </children>
 </AnchorPane>
