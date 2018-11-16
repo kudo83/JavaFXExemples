@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.carrent.controller.DashboardController">
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.carrent.controller.DashboardController">
    <children>
       <VBox prefHeight="800.0" prefWidth="200.0" styleClass="sidebar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -33,32 +33,32 @@
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </VBox.margin>
             </TextField>
-            <JFXButton fx:id="btnHome" onAction="#onMenuAction" prefHeight="40.0" prefWidth="200.0" styleClass="menu-item-selected" text="Home">
+            <JFXButton fx:id="Home" onAction="#onMenuAction" prefHeight="40.0" prefWidth="200.0" styleClass="menu-item-selected" text="Home">
                <graphic>
-                  <FontAwesomeIconView glyphName="HOME" size="25" styleClass="glyph--selected" />
+                  <FontAwesomeIconView glyphName="HOME" size="25" styleClass="glyph-selected" />
                </graphic>
             </JFXButton>
-            <JFXButton fx:id="btnCients" graphicTextGap="8.0" onAction="#onMenuAction" prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Clients">
+            <JFXButton fx:id="Clients" graphicTextGap="8.0" onAction="#onMenuAction" prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Clients">
                <graphic>
                   <FontAwesomeIconView glyphName="USERS" size="20" styleClass="glyph" />
                </graphic>
             </JFXButton>
-            <JFXButton fx:id="btnVehicules" graphicTextGap="6.0" onAction="#onMenuAction" prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Vehicles">
+            <JFXButton fx:id="Vehicles" graphicTextGap="6.0" onAction="#onMenuAction" prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Vehicles">
                <graphic>
                   <FontAwesomeIconView glyphName="CAR" size="20" styleClass="glyph" />
                </graphic>
             </JFXButton>
-            <JFXButton fx:id="btnReservation" onAction="#onMenuAction" prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Reservations">
+            <JFXButton fx:id="Reservations" onAction="#onMenuAction" prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Reservations">
                <graphic>
                   <FontAwesomeIconView glyphName="KEY" size="25" styleClass="glyph" />
                </graphic>
             </JFXButton>
-            <JFXButton fx:id="btnInvoices" graphicTextGap="12.0" onAction="#onMenuAction" prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Invoices">
+            <JFXButton fx:id="Invoices" graphicTextGap="12.0" onAction="#onMenuAction" prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Invoices">
                <graphic>
                   <FontAwesomeIconView glyphName="FILE_TEXT_ALT" size="20" styleClass="glyph" />
                </graphic>
             </JFXButton>
-            <JFXButton fx:id="btnPlanner" graphicTextGap="10.0" onAction="#onMenuAction" prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Planner">
+            <JFXButton fx:id="Planner" graphicTextGap="10.0" onAction="#onMenuAction" prefHeight="40.0" prefWidth="200.0" styleClass="menu-item" text="Planner">
                <graphic>
                   <FontAwesomeIconView glyphName="CALENDAR" size="20" styleClass="glyph" />
                </graphic>
@@ -87,7 +87,7 @@
       </AnchorPane>
       <ScrollPane layoutX="200.0" layoutY="102.0" prefHeight="700.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
         <content>
-          <AnchorPane fx:id="contentPane" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+          <AnchorPane fx:id="contentPane" />
         </content>
       </ScrollPane>
    </children>

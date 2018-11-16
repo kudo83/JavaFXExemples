@@ -16,7 +16,7 @@ import javafx.scene.layout.AnchorPane;
  *
  * @author Aissam
  */
-public class HomeController implements Initializable {
+public class InvoicesController implements Initializable {
 
     @FXML
     private AnchorPane innerContentPane;

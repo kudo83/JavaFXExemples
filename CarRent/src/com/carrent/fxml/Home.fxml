@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.carrent.controller.HomeController">
+<AnchorPane fx:id="innerContentPane" prefHeight="800.0" prefWidth="1200.0" styleClass="inner-AnchorPane" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.carrent.controller.HomeController">
    <children>
-      <Text layoutX="374.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOME">
-         <font>
-            <Font size="81.0" />
-         </font>
-      </Text>
+      <Pane layoutX="72.0" layoutY="74.0" prefHeight="612.0" prefWidth="1064.0" styleClass="block-pane">
+         <effect>
+            <DropShadow color="#00000028" height="11.0" radius="6.0" width="15.0" />
+         </effect>
+         <children>
+            <Label layoutX="34.0" layoutY="27.0" prefHeight="32.0" prefWidth="165.0" styleClass="block-title-lbl" text="Weekly Overview" />
+            <Label layoutX="34.0" layoutY="43.0" prefHeight="32.0" prefWidth="51.0" styleClass="block-subtitle-lbl" text="Periode:" />
+            <Label layoutX="83.0" layoutY="43.0" prefHeight="32.0" prefWidth="74.0" styleClass="block-subtitle-lbl" text="NOV12,2018" />
+            <Label layoutX="168.0" layoutY="43.0" prefHeight="32.0" prefWidth="99.0" styleClass="block-subtitle-lbl" text="NOV19,2018" />
+            <Label layoutX="156.0" layoutY="43.0" prefHeight="32.0" prefWidth="10.0" styleClass="block-subtitle-lbl" text="-" />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

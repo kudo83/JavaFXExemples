@@ -68,7 +68,7 @@ public class LoginController implements Initializable {
             window.setTitle("Dashboard");
             window.setScene(newScene);
             //    parent.requestFocus();
-//            window.setMaximized(true);
+            window.setMaximized(true);
 window.show();
         } catch (IOException ex) {
             Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
