@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="innerContentPane" prefHeight="800.0" prefWidth="1200.0" styleClass="inner-AnchorPane" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.carrent.controller.HomeController">
+<AnchorPane fx:id="innerContentPane" prefHeight="1200.0" prefWidth="1200.0" styleClass="inner-AnchorPane" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.carrent.controller.HomeController">
    <children>
       <Pane layoutX="72.0" layoutY="74.0" prefHeight="612.0" prefWidth="1064.0" styleClass="block-pane">
          <effect>
@@ -17,7 +25,129 @@
             <Label layoutX="83.0" layoutY="43.0" prefHeight="32.0" prefWidth="74.0" styleClass="block-subtitle-lbl" text="NOV12,2018" />
             <Label layoutX="168.0" layoutY="43.0" prefHeight="32.0" prefWidth="99.0" styleClass="block-subtitle-lbl" text="NOV19,2018" />
             <Label layoutX="156.0" layoutY="43.0" prefHeight="32.0" prefWidth="10.0" styleClass="block-subtitle-lbl" text="-" />
+            <HBox alignment="CENTER" layoutX="34.0" layoutY="96.0" prefHeight="72.0" prefWidth="993.0" spacing="50.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="72.0" prefWidth="172.0" styleClass="stat-box">
+                     <children>
+                        <ImageView fitHeight="67.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/icons8-user-100.png" />
+                           </image>
+                        </ImageView>
+                        <VBox alignment="CENTER" prefHeight="70.0" prefWidth="104.0">
+                           <children>
+                              <Label styleClass="stat" text="1258" />
+                              <Label styleClass="stat-desc" text="Accounts" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="72.0" prefWidth="172.0" styleClass="stat-box">
+                     <children>
+                        <ImageView fitHeight="67.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/icons8-car-rental-100.png" />
+                           </image>
+                        </ImageView>
+                        <VBox alignment="CENTER" prefHeight="70.0" prefWidth="104.0">
+                           <children>
+                              <Label styleClass="stat" text="532" />
+                              <Label styleClass="stat-desc" text="Rentals" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="72.0" prefWidth="172.0" styleClass="stat-box">
+                     <children>
+                        <ImageView fitHeight="67.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/icons8-visit-100.png" />
+                           </image>
+                        </ImageView>
+                        <VBox alignment="CENTER" prefHeight="70.0" prefWidth="104.0">
+                           <children>
+                              <Label styleClass="stat" text="3450" />
+                              <Label styleClass="stat-desc" text="Visites" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="72.0" prefWidth="172.0" styleClass="stat-box">
+                     <children>
+                        <ImageView fitHeight="67.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/icons8-chart-100.png" />
+                           </image>
+                        </ImageView>
+                        <VBox alignment="CENTER" prefHeight="70.0" prefWidth="104.0">
+                           <children>
+                              <Label styleClass="stat" text="32%" />
+                              <Label styleClass="stat-desc" text="Conversions" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER_RIGHT" layoutX="810.0" layoutY="200.0" prefHeight="376.0" prefWidth="208.0" spacing="40.0">
+               <children>
+                  <VBox alignment="CENTER_RIGHT" prefHeight="73.0" prefWidth="208.0">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="48.0" prefWidth="208.0" spacing="15.0">
+                           <children>
+                              <Label styleClass="stat" text="127" />
+                              <Label styleClass="stat-var" text="27%">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#45c354" glyphName="CARET_UP" size="20" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label styleClass="stat-desc" text="Total billed dayes" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_RIGHT" prefHeight="73.0" prefWidth="208.0">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="48.0" prefWidth="208.0" spacing="15.0">
+                           <children>
+                              <Label styleClass="stat" text="\$26,584" />
+                              <Label styleClass="stat-var" text="12%">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#45c354" glyphName="CARET_UP" size="20" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label styleClass="stat-desc" text="Total billed dayes" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_RIGHT" prefHeight="73.0" prefWidth="208.0">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="48.0" prefWidth="208.0" spacing="15.0">
+                           <children>
+                              <Label styleClass="stat" text="\$97,356" />
+                              <Label styleClass="stat-var" text="9%">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="RED" glyphName="CARET_DOWN" size="20" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label styleClass="stat-desc" text="Total billed dayes" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <AreaChart layoutX="120.0" layoutY="176.0" prefHeight="400.0" prefWidth="638.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </AreaChart>
          </children>
       </Pane>
+      <Pane layoutX="72.0" layoutY="712.0" prefHeight="343.0" prefWidth="573.0" />
    </children>
 </AnchorPane>

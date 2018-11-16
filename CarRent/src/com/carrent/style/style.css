@@ -8,6 +8,8 @@ and open the template in the editor.
     Author     : Aissam 
 */
 
+
+
 .yesteryear-text{
     -fx-font-family :  'Yesteryear', cursive;
     -fx-font-size: 40px;
@@ -88,3 +90,21 @@ and open the template in the editor.
 }
 
 
+.stat-box{
+    -fx-border-color:  #F2F2F2;
+}
+
+.stat{
+    -fx-font-family: 'Century Gothic';
+    -fx-font-size: 35px;
+    -fx-text-fill: #5C5C5C;;
+}
+.stat-desc{
+    -fx-font-size: 12px;
+    -fx-text-fill: #5C5C5C;;
+}
+.stat-var{
+      -fx-font-size: 15px;
+    -fx-text-fill: #5C5C5C;
+    
+}
