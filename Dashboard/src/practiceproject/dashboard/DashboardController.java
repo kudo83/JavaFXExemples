@@ -114,7 +114,7 @@ public class DashboardController implements Initializable {
             AnchorPane OverviewPane = FXMLLoader.load(getClass().getResource(pane));
 
             contentPane.getChildren().setAll(OverviewPane);
-            contentPane.setMinWidth(OverviewPane.getMinWidth());
+      //      contentPane.setMinWidth(OverviewPane.getMinWidth());
             contentPane.setMinHeight(OverviewPane.getMinHeight());
 
         } catch (IOException ex) {

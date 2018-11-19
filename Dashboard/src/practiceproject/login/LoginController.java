@@ -18,6 +18,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
@@ -81,14 +82,14 @@ public class LoginController implements Initializable {
 //        if ()
         try {
 
-            AnchorPane dashPane = FXMLLoader.load(Practiceproject.class.getResource("dashboard/Dashboard.fxml"));
+            Parent dashPane = FXMLLoader.load(Practiceproject.class.getResource("dashboard/Dashboard.fxml"));
             Scene dashScene = new Scene(dashPane);
 
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setTitle("Dashboard");
             window.setScene(dashScene);
             dashPane.requestFocus();
-//            window.setMaximized(true);
+            window.setMaximized(true);
             window.show();
 
         } catch (IOException ex) {

@@ -12,9 +12,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="627.0" prefWidth="798.0" style="-fx-background-color: #2A303B;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practiceproject.login.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="627.0" prefWidth="798.0" style="-fx-background-color: #2A303B;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practiceproject.login.LoginController">
     <children>
-      <Pane layoutX="136.0" prefHeight="633.0" prefWidth="302.0" style="-fx-background-color: #242B35;" styleClass="#242B35">
+      <Pane layoutX="136.0" prefHeight="633.0" prefWidth="302.0" style="-fx-background-color: #242B35;">
          <children>
             <FontAwesomeIconView fill="WHITE" glyphName="SEND_ALT" layoutX="111.0" layoutY="323.0" size="80" />
             <Text id="company_name" fill="WHITE" layoutX="68.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="logo" text="Awsome Company" wrappingWidth="178.8203125">
@@ -23,11 +23,6 @@
                </font>
             </Text>
          </children></Pane>
-      <JFXButton fx:id="BtnSignIn" layoutY="272.0" onAction="#onMenuAction" prefHeight="40.0" prefWidth="138.0" styleClass="menu-item-selected" stylesheets="@../style.css" text="Sign In" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </JFXButton>
       <JFXButton fx:id="BtnSignUp" layoutY="312.0" onAction="#onMenuAction" prefHeight="40.0" prefWidth="138.0" styleClass="menu-item" text="Sign UP" textFill="WHITE" />
       <AnchorPane fx:id="signInPane" layoutX="438.0" layoutY="-2.0" maxHeight="627.0" maxWidth="364.0" minHeight="627.0" minWidth="364.0" prefHeight="627.0" prefWidth="364.0" style="-fx-background-color: #2B333E;">
          <children>
@@ -54,7 +49,7 @@
             </JFXButton>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="signUpPane" layoutX="438.0" prefHeight="633.0" prefWidth="365.0" style="-fx-background-color: #2B333E;">
+      <AnchorPane fx:id="signUpPane" layoutX="438.0" prefHeight="633.0" prefWidth="350.0" style="-fx-background-color: #2B333E;">
          <children>
             <Text fill="WHITE" layoutX="123.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: 'Yesteryear', cursive; -fx-font-size: 35;" text="Sign Up" wrappingWidth="167.8203125">
                <font>
@@ -82,5 +77,10 @@
             <JFXPasswordField fx:id="confirmPassword" layoutX="53.0" layoutY="396.0" prefHeight="31.0" prefWidth="226.0" style="-fx-text-fill: white;" />
          </children>
       </AnchorPane>
+      <JFXButton fx:id="BtnSignIn" layoutY="272.0" onAction="#onMenuAction" prefHeight="40.0" prefWidth="138.0" styleClass="menu-item-selected" stylesheets="@../style.css" text="Sign In" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
     </children>
 </AnchorPane>

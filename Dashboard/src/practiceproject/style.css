@@ -13,7 +13,7 @@ and open the template in the editor.
 
 .menu-item{
     -fx-background-image: none;
-    -fx-background-color:transparent;
+    /*-fx-background-color:transparent;*/
     -fx-text-fill:#AAAAAA;
     -fx-font-size: 15px;
     -fx-alignment: CENTER_LEFT;
@@ -21,7 +21,7 @@ and open the template in the editor.
 
 }
 .menu-item-selected {
-    -fx-background-color:transparent;
+    /*-fx-background-color:transparent;*/
     -fx-background-image: url("../practiceproject/icons/side.png");
     -fx-background-repeat: no-repeat;
     -fx-font-size: 15px;

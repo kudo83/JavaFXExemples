@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package practiceproject;
 
 import javafx.application.Application;
@@ -17,14 +16,16 @@ import javafx.stage.Stage;
  * @author Aissam
  */
 public class Practiceproject extends Application {
-    
+
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("login/Login.fxml"));
-        
+
         Scene scene = new Scene(root);
-        
+
         scene.getStylesheets().add("https://fonts.googleapis.com/css?family=Yesteryear");
+        scene.getStylesheets().add("https://fonts.googleapis.com/css?family=Lobster");
+        scene.getStylesheets().add("https://fonts.googleapis.com/css?family=Montserrat");
 
         stage.setScene(scene);
         stage.show();

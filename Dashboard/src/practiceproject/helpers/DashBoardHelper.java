@@ -7,8 +7,6 @@ package practiceproject.helpers;
 
 import javafx.scene.control.Alert;
 import javafx.stage.Window;
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
 
 /**
  *
@@ -19,7 +17,7 @@ public class DashBoardHelper {
     public static void showAlert(Alert.AlertType alertType, Window owner, String title, String message) {
         Alert alert = new Alert(alertType);
         alert.setTitle(title);
-        alert.setHeaderText(null);
+       // alert.setHeaderText(null);
         alert.setContentText(message);
         alert.initOwner(owner);
         alert.show();
