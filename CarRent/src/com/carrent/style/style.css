@@ -72,12 +72,11 @@ and open the template in the editor.
 
 }
 
-.inner-AnchorPane{
-    -fx-background-color:  #F6F5FC;
-}
+
 
 .block-pane{
 -fx-background-color:  white;
+-fx-focus-color: transparent; 
 }
 
 .block-title-lbl{

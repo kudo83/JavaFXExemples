@@ -85,9 +85,9 @@
             </Label>
          </children>
       </AnchorPane>
-      <ScrollPane layoutX="200.0" layoutY="102.0" prefHeight="700.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="200.0" layoutY="102.0" prefHeight="700.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
         <content>
-          <AnchorPane fx:id="contentPane" />
+          <AnchorPane fx:id="contentPane" prefHeight="743.0" prefWidth="1006.0" style="-fx-background-color: #F6F5FC;" />
         </content>
       </ScrollPane>
    </children>

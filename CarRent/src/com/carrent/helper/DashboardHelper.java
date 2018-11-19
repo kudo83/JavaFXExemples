@@ -25,6 +25,8 @@ public class DashboardHelper {
             AnchorPane content = FXMLLoader.load(Main.class.getResource("fxml/" + pane + ".fxml"));
 
             contentPane.getChildren().setAll(content);
+            contentPane.setMinWidth(content.getMaxWidth());
+            contentPane.setMinHeight(content.getMaxHeight());
 
         } catch (IOException ex) {
             Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);

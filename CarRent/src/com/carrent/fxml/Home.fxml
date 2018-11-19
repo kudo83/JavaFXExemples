@@ -4,7 +4,10 @@
 <?import javafx.scene.chart.AreaChart?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -13,17 +16,17 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="innerContentPane" prefHeight="1200.0" prefWidth="1200.0" styleClass="inner-AnchorPane" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.carrent.controller.HomeController">
+<AnchorPane fx:id="innerContentPane" prefHeight="1162.0" prefWidth="1200.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.carrent.controller.HomeController">
    <children>
-      <Pane layoutX="72.0" layoutY="74.0" prefHeight="612.0" prefWidth="1064.0" styleClass="block-pane">
+      <Pane fx:id="monthlyIncome" layoutX="72.0" layoutY="74.0" prefHeight="612.0" prefWidth="1064.0" styleClass="block-pane">
          <effect>
-            <DropShadow color="#00000028" height="11.0" radius="6.0" width="15.0" />
+            <DropShadow color="#00000028" height="13.0" radius="6.5" width="15.0" />
          </effect>
          <children>
             <Label layoutX="34.0" layoutY="27.0" prefHeight="32.0" prefWidth="165.0" styleClass="block-title-lbl" text="Weekly Overview" />
             <Label layoutX="34.0" layoutY="43.0" prefHeight="32.0" prefWidth="51.0" styleClass="block-subtitle-lbl" text="Periode:" />
-            <Label layoutX="83.0" layoutY="43.0" prefHeight="32.0" prefWidth="74.0" styleClass="block-subtitle-lbl" text="NOV12,2018" />
-            <Label layoutX="168.0" layoutY="43.0" prefHeight="32.0" prefWidth="99.0" styleClass="block-subtitle-lbl" text="NOV19,2018" />
+            <Label fx:id="startDate" layoutX="83.0" layoutY="43.0" prefHeight="32.0" prefWidth="74.0" styleClass="block-subtitle-lbl" text="NOV12,2018" />
+            <Label fx:id="endDate" layoutX="168.0" layoutY="43.0" prefHeight="32.0" prefWidth="99.0" styleClass="block-subtitle-lbl" text="NOV19,2018" />
             <Label layoutX="156.0" layoutY="43.0" prefHeight="32.0" prefWidth="10.0" styleClass="block-subtitle-lbl" text="-" />
             <HBox alignment="CENTER" layoutX="34.0" layoutY="96.0" prefHeight="72.0" prefWidth="993.0" spacing="50.0">
                <children>
@@ -36,7 +39,7 @@
                         </ImageView>
                         <VBox alignment="CENTER" prefHeight="70.0" prefWidth="104.0">
                            <children>
-                              <Label styleClass="stat" text="1258" />
+                              <Label fx:id="weeklyAccounts" styleClass="stat" text="1258" />
                               <Label styleClass="stat-desc" text="Accounts" />
                            </children>
                         </VBox>
@@ -51,8 +54,8 @@
                         </ImageView>
                         <VBox alignment="CENTER" prefHeight="70.0" prefWidth="104.0">
                            <children>
-                              <Label styleClass="stat" text="532" />
-                              <Label styleClass="stat-desc" text="Rentals" />
+                              <Label fx:id="rentals" styleClass="stat" text="532" />
+                              <Label fx:id="weeklyRentals" styleClass="stat-desc" text="Rentals" />
                            </children>
                         </VBox>
                      </children>
@@ -66,7 +69,7 @@
                         </ImageView>
                         <VBox alignment="CENTER" prefHeight="70.0" prefWidth="104.0">
                            <children>
-                              <Label styleClass="stat" text="3450" />
+                              <Label fx:id="weeklyVisits" styleClass="stat" text="3450" />
                               <Label styleClass="stat-desc" text="Visites" />
                            </children>
                         </VBox>
@@ -81,7 +84,7 @@
                         </ImageView>
                         <VBox alignment="CENTER" prefHeight="70.0" prefWidth="104.0">
                            <children>
-                              <Label styleClass="stat" text="32%" />
+                              <Label fx:id="weeklyConversionRate" styleClass="stat" text="32%" />
                               <Label styleClass="stat-desc" text="Conversions" />
                            </children>
                         </VBox>
@@ -95,7 +98,7 @@
                      <children>
                         <HBox alignment="CENTER_RIGHT" prefHeight="48.0" prefWidth="208.0" spacing="15.0">
                            <children>
-                              <Label styleClass="stat" text="127" />
+                              <Label fx:id="weeklyBilledDays" styleClass="stat" text="127" />
                               <Label styleClass="stat-var" text="27%">
                                  <graphic>
                                     <FontAwesomeIconView fill="#45c354" glyphName="CARET_UP" size="20" />
@@ -118,7 +121,7 @@
                               </Label>
                            </children>
                         </HBox>
-                        <Label styleClass="stat-desc" text="Total billed dayes" />
+                        <Label styleClass="stat-desc" text="Monthly Income" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER_RIGHT" prefHeight="73.0" prefWidth="208.0">
@@ -133,12 +136,12 @@
                               </Label>
                            </children>
                         </HBox>
-                        <Label styleClass="stat-desc" text="Total billed dayes" />
+                        <Label fx:id="totalIncome" styleClass="stat-desc" text="Total Income" />
                      </children>
                   </VBox>
                </children>
             </VBox>
-            <AreaChart layoutX="120.0" layoutY="176.0" prefHeight="400.0" prefWidth="638.0">
+            <AreaChart fx:id="areaChart" layoutX="120.0" layoutY="176.0" prefHeight="400.0" prefWidth="638.0">
               <xAxis>
                 <CategoryAxis side="BOTTOM" />
               </xAxis>
@@ -148,6 +151,25 @@
             </AreaChart>
          </children>
       </Pane>
-      <Pane layoutX="72.0" layoutY="712.0" prefHeight="343.0" prefWidth="573.0" />
+      <Pane layoutX="715.0" layoutY="719.0" prefHeight="336.0" prefWidth="422.0" styleClass="block-pane">
+         <effect>
+            <DropShadow color="#00000028" height="13.0" radius="6.5" width="15.0" />
+         </effect>
+         <children>
+            <PieChart fx:id="pieChart" layoutY="4.0" prefHeight="349.0" prefWidth="422.0" />
+         </children>
+      </Pane>
+      <TableView layoutX="72.0" layoutY="717.0" prefHeight="343.0" prefWidth="598.0" styleClass="block-pane" stylesheets="@../style/tableView.css">
+        <columns>
+          <TableColumn fx:id="refColumn" prefWidth="100.0" text="Ref" />
+          <TableColumn fx:id="nameColumn" prefWidth="109.0" text="Name" />
+            <TableColumn fx:id="totalDaysColumn" prefWidth="136.0" text="Total days" />
+            <TableColumn fx:id="amountColumn" prefWidth="99.0" text="Amount" />
+            <TableColumn fx:id="returnDateColumn" prefWidth="152.0" text="Return date" />
+        </columns>
+         <effect>
+            <DropShadow color="#00000029" height="13.0" radius="6.5" width="15.0" />
+         </effect>
+      </TableView>
    </children>
 </AnchorPane>

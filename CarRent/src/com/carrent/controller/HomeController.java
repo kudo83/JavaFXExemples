@@ -9,7 +9,12 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.chart.AreaChart;
+import javafx.scene.chart.PieChart;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 
 /**
  * FXML Controller class
@@ -20,6 +25,40 @@ public class HomeController implements Initializable {
 
     @FXML
     private AnchorPane innerContentPane;
+    @FXML
+    private Pane monthlyIncome;
+    @FXML
+    private Label startDate;
+    @FXML
+    private Label endDate;
+    @FXML
+    private Label weeklyAccounts;
+    @FXML
+    private Label rentals;
+    @FXML
+    private Label weeklyRentals;
+    @FXML
+    private Label weeklyVisits;
+    @FXML
+    private Label weeklyConversionRate;
+    @FXML
+    private Label weeklyBilledDays;
+    @FXML
+    private Label totalIncome;
+    @FXML
+    private AreaChart<?, ?> areaChart;
+    @FXML
+    private PieChart pieChart;
+    @FXML
+    private TableColumn<?, ?> refColumn;
+    @FXML
+    private TableColumn<?, ?> nameColumn;
+    @FXML
+    private TableColumn<?, ?> totalDaysColumn;
+    @FXML
+    private TableColumn<?, ?> amountColumn;
+    @FXML
+    private TableColumn<?, ?> returnDateColumn;
 
 
     /**
