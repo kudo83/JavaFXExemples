@@ -107,3 +107,11 @@ and open the template in the editor.
     -fx-text-fill: #5C5C5C;
     
 }
+
+.variation-up{
+    -fx-fill: forestgreen;
+}
+
+.variation-down{
+    -fx-fill: firebrick;
+}

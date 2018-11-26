@@ -5,6 +5,9 @@
  */
 package com.carrent.controller;
 
+import com.carrent.dto.StatisticsDTO;
+import com.carrent.helper.StatisticsHelper;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -26,15 +29,13 @@ public class HomeController implements Initializable {
     @FXML
     private AnchorPane innerContentPane;
     @FXML
-    private Pane monthlyIncome;
+    private Label monthlyIncome;
     @FXML
     private Label startDate;
     @FXML
     private Label endDate;
     @FXML
     private Label weeklyAccounts;
-    @FXML
-    private Label rentals;
     @FXML
     private Label weeklyRentals;
     @FXML
@@ -45,6 +46,13 @@ public class HomeController implements Initializable {
     private Label weeklyBilledDays;
     @FXML
     private Label totalIncome;
+    @FXML
+    private Label weeklyBilledDaysVariation;
+    @FXML
+    private Label monthlyIncomeVariation;
+    @FXML
+    private Label totalIncomeVariation;
+
     @FXML
     private AreaChart<?, ?> areaChart;
     @FXML
@@ -59,17 +67,42 @@ public class HomeController implements Initializable {
     private TableColumn<?, ?> amountColumn;
     @FXML
     private TableColumn<?, ?> returnDateColumn;
-
+    @FXML
+    private FontAwesomeIconView weeklyBilledDaysGlyph;
+    @FXML
+    private FontAwesomeIconView monthlyIncomeGlyph;
+    @FXML
+    private FontAwesomeIconView totalIncomeGlyph;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       
-       
-    }    
-    
-    
-    
+
+        StatisticsDTO statDTO = StatisticsHelper.prepareStatistics();
+
+        monthlyIncome.setText(statDTO.getMonthlyIncome());
+        startDate.setText(statDTO.getStartDate());
+        endDate.setText(statDTO.getEndDate());
+        weeklyAccounts.setText(statDTO.getWeeklyAccounts());
+        weeklyRentals.setText(statDTO.getWeeklyRentals());
+        weeklyVisits.setText(statDTO.getWeeklyVisits());
+        weeklyConversionRate.setText(statDTO.getWeeklyConversionRate());
+        weeklyBilledDays.setText(statDTO.getWeeklyBilledDays());
+        totalIncome.setText(statDTO.getTotalIncome());
+        weeklyBilledDaysVariation.setText(statDTO.getWeeklyBilledDaysVariation());
+        weeklyBilledDaysGlyph.setGlyphName(statDTO.getWeeklyBilledDaysGlyphName());
+         weeklyBilledDaysGlyph.getStyleClass().removeAll();
+        weeklyBilledDaysGlyph.getStyleClass().add(statDTO.getWeeklyBilledDaysGlyphStyle());
+        monthlyIncomeGlyph.setGlyphName(statDTO.getMonthlyIncomeGlyphName());
+        monthlyIncomeGlyph.getStyleClass().removeAll();
+        monthlyIncomeGlyph.getStyleClass().add(statDTO.getTotalIncomeGlyphStyle());
+        totalIncomeGlyph.setGlyphName(statDTO.getTotalIncomeGlyphName());
+        totalIncomeGlyph.getStyleClass().removeAll();
+        totalIncomeGlyph.getStyleClass().add(statDTO.getTotalIncomeGlyphStyle());
+        monthlyIncomeVariation.setText(statDTO.getMonthlyIncomeVariation());
+        totalIncomeVariation.setText(statDTO.getTotalIncomeVariation());
+    }
+
 }

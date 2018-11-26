@@ -18,7 +18,7 @@
 
 <AnchorPane fx:id="innerContentPane" prefHeight="1162.0" prefWidth="1200.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.carrent.controller.HomeController">
    <children>
-      <Pane fx:id="monthlyIncome" layoutX="72.0" layoutY="74.0" prefHeight="612.0" prefWidth="1064.0" styleClass="block-pane">
+      <Pane layoutX="72.0" layoutY="74.0" prefHeight="612.0" prefWidth="1064.0" styleClass="block-pane">
          <effect>
             <DropShadow color="#00000028" height="13.0" radius="6.5" width="15.0" />
          </effect>
@@ -54,8 +54,8 @@
                         </ImageView>
                         <VBox alignment="CENTER" prefHeight="70.0" prefWidth="104.0">
                            <children>
-                              <Label fx:id="rentals" styleClass="stat" text="532" />
-                              <Label fx:id="weeklyRentals" styleClass="stat-desc" text="Rentals" />
+                              <Label fx:id="weeklyRentals" styleClass="stat" text="532" />
+                              <Label styleClass="stat-desc" text="Rentals" />
                            </children>
                         </VBox>
                      </children>
@@ -99,9 +99,9 @@
                         <HBox alignment="CENTER_RIGHT" prefHeight="48.0" prefWidth="208.0" spacing="15.0">
                            <children>
                               <Label fx:id="weeklyBilledDays" styleClass="stat" text="127" />
-                              <Label styleClass="stat-var" text="27%">
+                              <Label fx:id="weeklyBilledDaysVariation" styleClass="stat-var" text="27%">
                                  <graphic>
-                                    <FontAwesomeIconView fill="#45c354" glyphName="CARET_UP" size="20" />
+                                    <FontAwesomeIconView fx:id="weeklyBilledDaysGlyph" fill="#45c354" glyphName="CARET_UP" size="20" />
                                  </graphic>
                               </Label>
                            </children>
@@ -113,10 +113,10 @@
                      <children>
                         <HBox alignment="CENTER_RIGHT" prefHeight="48.0" prefWidth="208.0" spacing="15.0">
                            <children>
-                              <Label styleClass="stat" text="\$26,584" />
-                              <Label styleClass="stat-var" text="12%">
+                              <Label fx:id="monthlyIncome" styleClass="stat" text="\$26,584" />
+                              <Label fx:id="monthlyIncomeVariation" styleClass="stat-var" text="0%">
                                  <graphic>
-                                    <FontAwesomeIconView fill="#45c354" glyphName="CARET_UP" size="20" />
+                                    <FontAwesomeIconView fx:id="monthlyIncomeGlyph" fill="#45c354" glyphName="CARET_UP" size="20" />
                                  </graphic>
                               </Label>
                            </children>
@@ -128,10 +128,10 @@
                      <children>
                         <HBox alignment="CENTER_RIGHT" prefHeight="48.0" prefWidth="208.0" spacing="15.0">
                            <children>
-                              <Label styleClass="stat" text="\$97,356" />
-                              <Label styleClass="stat-var" text="9%">
+                              <Label fx:id="totalIncome" styleClass="stat" text="\$97,356" />
+                              <Label fx:id="totalIncomeVariation" styleClass="stat-var" text="9%">
                                  <graphic>
-                                    <FontAwesomeIconView fill="RED" glyphName="CARET_DOWN" size="20" />
+                                    <FontAwesomeIconView fx:id="totalIncomeGlyph" fill="RED" glyphName="CARET_DOWN" size="20" />
                                  </graphic>
                               </Label>
                            </children>
