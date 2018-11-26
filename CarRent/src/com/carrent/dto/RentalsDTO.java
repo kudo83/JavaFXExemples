@@ -14,25 +14,21 @@ import java.time.LocalDate;
 public class RentalsDTO {
 
     private long id;
-    private String refColumn;
-    private String nameColumn;
-    private int totalDaysColumn;
-    private String amountColumn;
-    private LocalDate returnDateColumn;
+    private String ref;
+    private String name;
+    private int totalDays;
+    private String amount;
+    private LocalDate returnDate;
 
     //Contructor to create static example objects
-
-    public RentalsDTO(String refColumn, String nameColumn, int totalDaysColumn, String amountColumn, LocalDate returnDateColumn) {
-        this.refColumn = refColumn;
-        this.nameColumn = nameColumn;
-        this.totalDaysColumn = totalDaysColumn;
-        this.amountColumn = amountColumn;
-        this.returnDateColumn = returnDateColumn;
+    public RentalsDTO(String ref, String name, int totalDays, String amount, LocalDate returnDate) {
+        this.ref = ref;
+        this.name = name;
+        this.totalDays = totalDays;
+        this.amount = amount;
+        this.returnDate = returnDate;
     }
 
-
-  
-    
     //Getters and Setters
 
     public long getId() {
@@ -43,46 +39,44 @@ public class RentalsDTO {
         this.id = id;
     }
 
-    public String getRefColumn() {
-        return refColumn;
+    public String getRef() {
+        return ref;
     }
 
-    public void setRefColumn(String refColumn) {
-        this.refColumn = refColumn;
+    public void setRef(String ref) {
+        this.ref = ref;
     }
 
-    public String getNameColumn() {
-        return nameColumn;
+    public String getName() {
+        return name;
     }
 
-    public void setNameColumn(String nameColumn) {
-        this.nameColumn = nameColumn;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getTotalDaysColumn() {
-        return totalDaysColumn;
+    public int getTotalDay() {
+        return totalDays;
     }
 
-    public void setTotalDaysColumn(int totalDaysColumn) {
-        this.totalDaysColumn = totalDaysColumn;
+    public void setTotalDay(int totalDay) {
+        this.totalDays = totalDays;
     }
 
- 
-
-    public String getAmountColumn() {
-        return amountColumn;
+    public String getAmount() {
+        return amount;
     }
 
-    public void setAmountColumn(String amountColumn) {
-        this.amountColumn = amountColumn;
+    public void setAmount(String amount) {
+        this.amount = amount;
     }
 
-    public LocalDate getReturnColumn() {
-        return returnDateColumn;
+    public LocalDate getReturnDate() {
+        return returnDate;
     }
 
-    public void setReturnColumn(String returnColumn) {
-        this.returnDateColumn = returnDateColumn;
+    public void setReturnDate(LocalDate returnDate) {
+        this.returnDate = returnDate;
     }
     
 }

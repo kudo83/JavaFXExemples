@@ -9,6 +9,8 @@ import com.carrent.dto.RentalsDTO;
 import com.carrent.dto.StatisticsDTO;
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.HashMap;
+import java.util.Map;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -100,6 +102,21 @@ public class StatisticsHelper {
         recentRents.add(new RentalsDTO("45895", "Sarah", 1, "$40", LocalDate.of(2018, Month.OCTOBER, 31)));
         recentRents.add(new RentalsDTO("45895", "Rojer", 5, "$250", LocalDate.of(2018, Month.OCTOBER, 30)));
         return recentRents;
+
+    }
+
+    public static Map<String, Integer> prepareRentsOfTheWeek() {
+
+        Map<String, Integer> map = new HashMap<String, Integer>();
+        map.put("Mon", 4);
+        map.put("Tue", 10);
+        map.put("Wed", 15);
+        map.put("Thu", 8);
+        map.put("Fri", 5);
+        map.put("Sat", 18);
+        map.put("Sun", 15);
+
+        return map;
 
     }
 }

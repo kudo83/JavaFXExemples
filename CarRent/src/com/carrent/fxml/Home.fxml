@@ -18,7 +18,7 @@
 
 <AnchorPane fx:id="innerContentPane" prefHeight="1162.0" prefWidth="1200.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.carrent.controller.HomeController">
    <children>
-      <Pane layoutX="72.0" layoutY="74.0" prefHeight="612.0" prefWidth="1064.0" styleClass="block-pane">
+      <Pane layoutX="72.0" layoutY="30.0" prefHeight="622.0" prefWidth="1064.0" styleClass="block-pane">
          <effect>
             <DropShadow color="#00000028" height="13.0" radius="6.5" width="15.0" />
          </effect>
@@ -136,30 +136,30 @@
                               </Label>
                            </children>
                         </HBox>
-                        <Label fx:id="totalIncome" styleClass="stat-desc" text="Total Income" />
+                        <Label styleClass="stat-desc" text="Total Income" />
                      </children>
                   </VBox>
                </children>
             </VBox>
             <AreaChart fx:id="areaChart" layoutX="120.0" layoutY="176.0" prefHeight="400.0" prefWidth="638.0">
               <xAxis>
-                <CategoryAxis side="BOTTOM" />
+                <CategoryAxis fx:id="daysOfWeek" side="BOTTOM" />
               </xAxis>
               <yAxis>
-                <NumberAxis side="LEFT" />
+                <NumberAxis fx:id="numberOfRents" side="LEFT" />
               </yAxis>
             </AreaChart>
          </children>
       </Pane>
-      <Pane layoutX="715.0" layoutY="719.0" prefHeight="336.0" prefWidth="422.0" styleClass="block-pane">
+      <Pane layoutX="714.0" layoutY="697.0" prefHeight="336.0" prefWidth="422.0" styleClass="block-pane">
          <effect>
             <DropShadow color="#00000028" height="13.0" radius="6.5" width="15.0" />
          </effect>
          <children>
-            <PieChart fx:id="pieChart" layoutY="4.0" prefHeight="349.0" prefWidth="422.0" />
+            <PieChart fx:id="pieChart" layoutY="-13.0" prefHeight="349.0" prefWidth="422.0" />
          </children>
       </Pane>
-      <TableView fx:id="tabltRecentRents" layoutX="72.0" layoutY="717.0" prefHeight="343.0" prefWidth="598.0" styleClass="block-pane" stylesheets="@../style/tableView.css">
+      <TableView fx:id="tabltRecentRents" layoutX="72.0" layoutY="697.0" prefHeight="343.0" prefWidth="598.0" styleClass="block-pane" stylesheets="@../style/tableView.css">
         <columns>
           <TableColumn fx:id="refColumn" prefWidth="100.0" text="Ref" />
           <TableColumn fx:id="nameColumn" prefWidth="109.0" text="Name" />
