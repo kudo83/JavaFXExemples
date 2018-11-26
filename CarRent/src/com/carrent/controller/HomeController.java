@@ -10,12 +10,15 @@ import com.carrent.helper.StatisticsHelper;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.AreaChart;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
@@ -68,11 +71,14 @@ public class HomeController implements Initializable {
     @FXML
     private TableColumn<?, ?> returnDateColumn;
     @FXML
+    private TableView<?> tabltRecentRents;
+    @FXML
     private FontAwesomeIconView weeklyBilledDaysGlyph;
     @FXML
     private FontAwesomeIconView monthlyIncomeGlyph;
     @FXML
     private FontAwesomeIconView totalIncomeGlyph;
+    
 
     /**
      * Initializes the controller class.
@@ -80,6 +86,8 @@ public class HomeController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
+        //Statistics
+        
         StatisticsDTO statDTO = StatisticsHelper.prepareStatistics();
 
         monthlyIncome.setText(statDTO.getMonthlyIncome());
@@ -93,16 +101,27 @@ public class HomeController implements Initializable {
         totalIncome.setText(statDTO.getTotalIncome());
         weeklyBilledDaysVariation.setText(statDTO.getWeeklyBilledDaysVariation());
         weeklyBilledDaysGlyph.setGlyphName(statDTO.getWeeklyBilledDaysGlyphName());
-         weeklyBilledDaysGlyph.getStyleClass().removeAll();
+        weeklyBilledDaysGlyph.getStyleClass().removeAll();
         weeklyBilledDaysGlyph.getStyleClass().add(statDTO.getWeeklyBilledDaysGlyphStyle());
         monthlyIncomeGlyph.setGlyphName(statDTO.getMonthlyIncomeGlyphName());
         monthlyIncomeGlyph.getStyleClass().removeAll();
-        monthlyIncomeGlyph.getStyleClass().add(statDTO.getTotalIncomeGlyphStyle());
+        monthlyIncomeGlyph.getStyleClass().add(statDTO.getMonthlyIncomeGlyphStyle());
         totalIncomeGlyph.setGlyphName(statDTO.getTotalIncomeGlyphName());
         totalIncomeGlyph.getStyleClass().removeAll();
         totalIncomeGlyph.getStyleClass().add(statDTO.getTotalIncomeGlyphStyle());
         monthlyIncomeVariation.setText(statDTO.getMonthlyIncomeVariation());
         totalIncomeVariation.setText(statDTO.getTotalIncomeVariation());
+        
+        //TableView
+        
+        ObservableList recentRentList = StatisticsHelper.prepareRecentRentsList();
+        refColumn.setCellValueFactory(new PropertyValueFactory<>("refColumn"));
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("nameColumn"));
+        totalDaysColumn.setCellValueFactory(new PropertyValueFactory<>("totalDaysColumn"));
+        amountColumn.setCellValueFactory(new PropertyValueFactory<>("amountColumn"));
+        returnDateColumn.setCellValueFactory(new PropertyValueFactory<>("returnDateColumn"));
+        tabltRecentRents.setItems(recentRentList);
+        
     }
 
 }

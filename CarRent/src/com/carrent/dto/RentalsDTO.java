@@ -5,29 +5,33 @@
  */
 package com.carrent.dto;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author Aissam
  */
-public class tableRentalsDTO {
+public class RentalsDTO {
 
     private long id;
     private String refColumn;
     private String nameColumn;
-    private String totalColumn;
+    private int totalDaysColumn;
     private String amountColumn;
-    private String returnColumn;
+    private LocalDate returnDateColumn;
 
     //Contructor to create static example objects
 
-    public tableRentalsDTO(String refColumn, String nameColumn, String totalColumn, String amountColumn, String returnColumn) {
+    public RentalsDTO(String refColumn, String nameColumn, int totalDaysColumn, String amountColumn, LocalDate returnDateColumn) {
         this.refColumn = refColumn;
         this.nameColumn = nameColumn;
-        this.totalColumn = totalColumn;
+        this.totalDaysColumn = totalDaysColumn;
         this.amountColumn = amountColumn;
-        this.returnColumn = returnColumn;
+        this.returnDateColumn = returnDateColumn;
     }
-    
+
+
+  
     
     //Getters and Setters
 
@@ -55,13 +59,15 @@ public class tableRentalsDTO {
         this.nameColumn = nameColumn;
     }
 
-    public String getTotalColumn() {
-        return totalColumn;
+    public int getTotalDaysColumn() {
+        return totalDaysColumn;
     }
 
-    public void setTotalColumn(String totalColumn) {
-        this.totalColumn = totalColumn;
+    public void setTotalDaysColumn(int totalDaysColumn) {
+        this.totalDaysColumn = totalDaysColumn;
     }
+
+ 
 
     public String getAmountColumn() {
         return amountColumn;
@@ -71,12 +77,12 @@ public class tableRentalsDTO {
         this.amountColumn = amountColumn;
     }
 
-    public String getReturnColumn() {
-        return returnColumn;
+    public LocalDate getReturnColumn() {
+        return returnDateColumn;
     }
 
     public void setReturnColumn(String returnColumn) {
-        this.returnColumn = returnColumn;
+        this.returnDateColumn = returnDateColumn;
     }
     
 }

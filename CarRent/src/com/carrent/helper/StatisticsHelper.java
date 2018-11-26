@@ -5,11 +5,12 @@
  */
 package com.carrent.helper;
 
+import com.carrent.dto.RentalsDTO;
 import com.carrent.dto.StatisticsDTO;
 import java.time.LocalDate;
 import java.time.Month;
-import java.util.ArrayList;
-import java.util.List;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 /**
  *
@@ -17,7 +18,7 @@ import java.util.List;
  */
 public class StatisticsHelper {
 
-    static class VariationGlyph {
+    private static class VariationGlyph {
 
         private String glyphName = "";
         private String glyphStyleClass = "";
@@ -36,10 +37,10 @@ public class StatisticsHelper {
         newStatistics.setStartDate(LocalDate.of(2018, Month.NOVEMBER, 19).toString());
         newStatistics.setEndDate(LocalDate.of(2018, Month.NOVEMBER, 25).toString());
 
-        int weeklyRentals = 129;
+        double weeklyRentals = 129;
         newStatistics.setWeeklyRentals(String.valueOf(weeklyRentals));
 
-        int weeklyVisits = 295;
+        double weeklyVisits = 295;
         newStatistics.setWeeklyVisits(String.valueOf(weeklyVisits));
 
         int weeklyConverstionRate = (int) (100 * (weeklyRentals / weeklyVisits));
@@ -48,7 +49,8 @@ public class StatisticsHelper {
         newStatistics.setWeeklyBilledDays(String.valueOf(452));
 
         double weeklyBilledDaysVariation = -5;
-        newStatistics.setWeeklyBilledDaysVariation(String.valueOf(Math.abs(weeklyBilledDaysVariation)+"%"));
+        newStatistics.setWeeklyBilledDaysVariation(String.valueOf(Math.abs(weeklyBilledDaysVariation) + "%"));
+
         VariationGlyph weeklyBilledDaysGlyph;
         weeklyBilledDaysGlyph = setVariationGlyph(weeklyBilledDaysVariation);
         newStatistics.setWeeklyBilledDaysGlyphName(weeklyBilledDaysGlyph.glyphName);
@@ -63,7 +65,7 @@ public class StatisticsHelper {
         newStatistics.setMonthlyIncomeGlyphStyle(monthlyIncomeGlyph.glyphStyleClass);
 
         newStatistics.setTotalIncome("$125,356");
-        double totalIncomeVariation = 1.3;
+        double totalIncomeVariation = -1.3;
         newStatistics.setTotalIncomeVariation(String.valueOf(Math.abs(totalIncomeVariation)) + "%");
 
         VariationGlyph totalIncomeGlyph;
@@ -88,5 +90,16 @@ public class StatisticsHelper {
             variationG.glyphStyleClass = "variation-down";
         }
         return variationG;
+    }
+
+    public static ObservableList<RentalsDTO> prepareRecentRentsList() {
+        ObservableList<RentalsDTO> recentRents = FXCollections.observableArrayList();
+        recentRents.add(new RentalsDTO("45895", "Amber", 10, "$300", LocalDate.of(2018, Month.NOVEMBER, 9)));
+        recentRents.add(new RentalsDTO("45895", "Steve", 3, "$90", LocalDate.of(2018, Month.OCTOBER, 31)));
+        recentRents.add(new RentalsDTO("45895", "Carl", 2, "$150", LocalDate.of(2018, Month.OCTOBER, 31)));
+        recentRents.add(new RentalsDTO("45895", "Sarah", 1, "$40", LocalDate.of(2018, Month.OCTOBER, 31)));
+        recentRents.add(new RentalsDTO("45895", "Rojer", 5, "$250", LocalDate.of(2018, Month.OCTOBER, 30)));
+        return recentRents;
+
     }
 }
