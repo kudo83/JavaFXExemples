@@ -13,6 +13,9 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ContextMenu;
+import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 /**
@@ -37,6 +40,10 @@ public class DashboardController implements Initializable {
     private JFXButton Reservations;
     @FXML
     private JFXButton Vehicles;
+    @FXML
+    private ContextMenu profileMenu;
+    @FXML
+    private Label profileLabel;
 
     /**
      * Initializes the controller class.
@@ -57,5 +64,10 @@ public class DashboardController implements Initializable {
                 DashboardHelper.removeDecorationToMenuItem(btn);
             }
         }
+    }
+
+    @FXML
+    private void onProfileClick(MouseEvent event) {
+         profileMenu.show(profileLabel, event.getScreenX(), event.getScreenY());
     }
 }

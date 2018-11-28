@@ -3,7 +3,9 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
@@ -70,18 +72,26 @@
             <DropShadow color="#00000067" height="10.0" radius="4.5" width="10.0" />
          </effect>
          <children>
-            <FontAwesomeIconView fill="#727272" glyphName="BELL" layoutX="770.0" layoutY="58.0" size="20" AnchorPane.rightAnchor="210.0" />
-            <FontAwesomeIconView fill="#727272" glyphName="GEAR" layoutX="841.0" layoutY="57.0" size="20" AnchorPane.rightAnchor="170.0" />
-            <Label id="notif-lbl" alignment="CENTER" layoutX="808.0" layoutY="33.0" prefHeight="17.0" prefWidth="17.0" text="10" AnchorPane.rightAnchor="200.0" />
-            <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="884.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="80.0">
+            <FontAwesomeIconView fill="#727272" glyphName="BELL" layoutX="703.0" layoutY="58.0" size="20" AnchorPane.rightAnchor="277.0" />
+            <FontAwesomeIconView fill="#727272" glyphName="GEAR" layoutX="741.0" layoutY="57.0" size="20" AnchorPane.rightAnchor="241.8571434020996" />
+            <Label id="notif-lbl" alignment="CENTER" layoutX="716.0" layoutY="33.0" prefHeight="17.0" prefWidth="17.0" text="10" AnchorPane.rightAnchor="267.0" />
+            <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="813.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="147.0">
                <image>
                   <Image url="@../image/lady.png" />
                </image>
             </ImageView>
-            <Label contentDisplay="RIGHT" layoutX="931.0" layoutY="42.0" text="Isobel" AnchorPane.rightAnchor="23.0">
+            <Label fx:id="profileLabel" contentDisplay="RIGHT" layoutX="864.0" layoutY="42.0" onMouseClicked="#onProfileClick" text="Isobel" AnchorPane.rightAnchor="90.0">
                <graphic>
                   <FontAwesomeIconView glyphName="ANGLE_DOWN" size="15" />
                </graphic>
+               <contextMenu>
+                  <ContextMenu fx:id="profileMenu">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Profile" />
+                        <MenuItem mnemonicParsing="false" text="Exit" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
             </Label>
          </children>
       </AnchorPane>

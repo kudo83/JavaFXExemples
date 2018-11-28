@@ -115,3 +115,19 @@ and open the template in the editor.
 .variation-down{
     -fx-fill: firebrick;
 }
+
+.default-color0.chart-series-area-fill{
+    -fx-fill : #DBEDF9;
+}
+.default-color0.chart-series-area-line{
+    -fx-stroke: #0A83BF;
+}
+.default-color0.chart-area-symbol {
+    -fx-background-color:#0A83BF;
+}
+
+.default-color0.chart-pie { -fx-pie-color: #4A148C; }
+.default-color1.chart-pie { -fx-pie-color: #0D47A1; }
+.default-color2.chart-pie { -fx-pie-color: #81D4FA; }
+.default-color3.chart-pie { -fx-pie-color: #E91E63; }
+.default-color4.chart-pie { -fx-pie-color: #00B8D4; }

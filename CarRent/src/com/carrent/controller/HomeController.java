@@ -140,49 +140,43 @@ public class HomeController implements Initializable {
         //Area Chart
         areaChart.getData().clear();
         
-        Map<String,Integer> map = StatisticsHelper.prepareRentsOfTheWeek();
+        Map<String,Integer> areaMap = StatisticsHelper.prepareRentsOfTheWeek();
 
         XYChart.Series<String, Number> series;
         series = new XYChart.Series<>();
         series.setName("Billed days");
-        series.getData().add(new XYChart.Data("Mon", map.get("Mon")));
-        series.getData().add(new XYChart.Data("Tue", map.get("Tue")));
-        series.getData().add(new XYChart.Data("Wed", map.get("Wed")));
-        series.getData().add(new XYChart.Data("Thu", map.get("Thu")));
-        series.getData().add(new XYChart.Data("Fri", map.get("Fri")));
-        series.getData().add(new XYChart.Data("Sat", map.get("Sat")));
-        series.getData().add(new XYChart.Data("Sun", map.get("Sun")));
+        series.getData().add(new XYChart.Data("Mon", areaMap.get("Mon")));
+        series.getData().add(new XYChart.Data("Tue", areaMap.get("Tue")));
+        series.getData().add(new XYChart.Data("Wed", areaMap.get("Wed")));
+        series.getData().add(new XYChart.Data("Thu", areaMap.get("Thu")));
+        series.getData().add(new XYChart.Data("Fri", areaMap.get("Fri")));
+        series.getData().add(new XYChart.Data("Sat", areaMap.get("Sat")));
+        series.getData().add(new XYChart.Data("Sun", areaMap.get("Sun")));
 
         areaChart.getData().addAll(series);
         
-    }
-    
-    private void createAreaChart() {
-
-        areaChart.getData().clear();
         
-        Map<String,Integer> map = StatisticsHelper.prepareRentsOfTheWeek();
+        //PIE CHART
+        
+         Map<String,Integer> pieMap = StatisticsHelper.prepareRentsofTheWeekByVehicleType();
+          ObservableList<PieChart.Data> pieChartData
+                = FXCollections.observableArrayList(
+                        new PieChart.Data("Cars", pieMap.get("Cars")),
+                        new PieChart.Data("Motorbikes", pieMap.get("Motorbikes")),
+                        new PieChart.Data("Vans", pieMap.get("Vans")),
+                        new PieChart.Data("Buses", pieMap.get("Buses")));
+          
 
-        XYChart.Series<String, Number> series;
-        series = new XYChart.Series<>();
-        series.setName("Billed days");
-        series.getData().add(new XYChart.Data("Mon", map.get("Mon")));
-        series.getData().add(new XYChart.Data("Tue", map.get("Tue")));
-        series.getData().add(new XYChart.Data("Wed", map.get("Wed")));
-        series.getData().add(new XYChart.Data("Thu", map.get("Thu")));
-        series.getData().add(new XYChart.Data("Fri", map.get("Fri")));
-        series.getData().add(new XYChart.Data("Sat", map.get("Sat")));
-        series.getData().add(new XYChart.Data("Sun", map.get("Sun")));
-
-        areaChart.getData().addAll(series);
-
+        pieChart.setData(pieChartData);
+        
     }
+   
 
     private void createPieChart() {
 
         ObservableList<PieChart.Data> pieChartData
                 = FXCollections.observableArrayList(
-                        new PieChart.Data("Cars", 13),
+                        new PieChart.Data("Cars", 85),
                         new PieChart.Data("Motorbikes", 25),
                         new PieChart.Data("Vans", 10),
                         new PieChart.Data("Buses", 22));

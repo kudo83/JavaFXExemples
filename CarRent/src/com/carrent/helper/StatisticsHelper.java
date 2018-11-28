@@ -97,10 +97,12 @@ public class StatisticsHelper {
     public static ObservableList<RentalsDTO> prepareRecentRentsList() {
         ObservableList<RentalsDTO> recentRents = FXCollections.observableArrayList();
         recentRents.add(new RentalsDTO("45895", "Amber", 10, "$300", LocalDate.of(2018, Month.NOVEMBER, 9)));
-        recentRents.add(new RentalsDTO("45895", "Steve", 3, "$90", LocalDate.of(2018, Month.OCTOBER, 31)));
-        recentRents.add(new RentalsDTO("45895", "Carl", 2, "$150", LocalDate.of(2018, Month.OCTOBER, 31)));
-        recentRents.add(new RentalsDTO("45895", "Sarah", 1, "$40", LocalDate.of(2018, Month.OCTOBER, 31)));
-        recentRents.add(new RentalsDTO("45895", "Rojer", 5, "$250", LocalDate.of(2018, Month.OCTOBER, 30)));
+        recentRents.add(new RentalsDTO("45896", "Steve", 3, "$90", LocalDate.of(2018, Month.OCTOBER, 31)));
+        recentRents.add(new RentalsDTO("45897", "Carl", 2, "$150", LocalDate.of(2018, Month.OCTOBER, 31)));
+        recentRents.add(new RentalsDTO("45898", "Sarah", 1, "$40", LocalDate.of(2018, Month.OCTOBER, 31)));
+        recentRents.add(new RentalsDTO("45899", "Rojer", 5, "$250", LocalDate.of(2018, Month.OCTOBER, 30)));
+        recentRents.add(new RentalsDTO("45900", "Raj", 5, "$220", LocalDate.of(2018, Month.OCTOBER, 30)));
+//        recentRents.add(new RentalsDTO("45901", "Sweeny", 5, "$120", LocalDate.of(2018, Month.OCTOBER, 30)));
         return recentRents;
 
     }
@@ -118,5 +120,16 @@ public class StatisticsHelper {
 
         return map;
 
+    }
+
+    public static Map<String, Integer> prepareRentsofTheWeekByVehicleType() {
+
+        Map<String, Integer> map = new HashMap<String, Integer>();
+        map.put("Cars", 85);
+        map.put("Motorbikes", 20);
+        map.put("Vans", 15);
+        map.put("Buses", 8);
+
+        return map;
     }
 }
