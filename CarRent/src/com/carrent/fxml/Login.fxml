@@ -55,7 +55,7 @@
       </Pane>
       <Pane fx:id="signInPane" layoutX="276.0" prefHeight="600.0" prefWidth="343.0" style="-fx-background-color: #2A303B;">
          <children>
-            <Label graphicTextGap="10.0" layoutX="89.0" layoutY="78.0" prefHeight="75.0" prefWidth="165.0" styleClass="yesteryear-text" text="Sign In" textFill="WHITE">
+            <Label graphicTextGap="10.0" layoutX="89.0" layoutY="78.0" prefHeight="75.0" prefWidth="193.0" styleClass="yesteryear-text" text="Sign In" textFill="WHITE">
                <graphic>
                   <MaterialDesignIconView fill="#02abf5" glyphName="ACCOUNT_KEY" size="40" />
                </graphic>
