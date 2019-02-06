@@ -1,0 +1,11 @@
+
+@font-face {
+   font-family: Yesteryear;
+   src: url(Yesteryear-Regular.ttf);
+}
+
+.yesteryear-text{
+    -fx-font-family :  'Yesteryear', cursive;
+    -fx-font-size: 40px;
+}
+
