@@ -1,7 +1,7 @@
 
 @font-face {
-   font-family: Yesteryear;
-   src: url(Yesteryear-Regular.ttf);
+    font-family: Yesteryear;
+    src: url(Yesteryear-Regular.ttf);
 }
 
 .yesteryear-text{
@@ -9,3 +9,64 @@
     -fx-font-size: 40px;
 }
 
+.root{
+    -fx-background-color: white;
+
+}
+.sideBar{
+    -fx-background-color: #2c323e;
+}
+
+.dash-logo{
+    -fx-text-fill: white;
+    -fx-font-size: 25px;
+    -fx-font-family:'Yesteryear', cursive;
+}
+
+.search-input{
+    -fx-border-radius:  10 10 10 10;
+    -fx-background-radius:  10 10 10 10;
+    -fx-background-color: transparent;
+    -fx-border-color:white;
+    -fx-prompt-text-fill:gray;
+    -fx-text-fill: white;
+}
+
+.menu-button{
+    -fx-background-image: none;
+    -fx-text-fill:#AAAAAA;
+    -fx-font-size: 15px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.menu-button:hover{
+    -fx-background-color: #5E5F61;
+    -fx-background-image: url("../image/side.png");
+    -fx-background-repeat: no-repeat;
+}
+
+
+.menu-button-selected{
+    -fx-background-image: url("../image/side.png");
+    -fx-background-repeat: no-repeat;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+    -fx-text-fill:white;
+}
+
+
+.glyph{
+    -fx-fill: #AAAAAA;
+}
+
+.glyph-selected{
+    -fx-fill:#04AEFF;
+
+}
+
+#notif-lbl{
+    -fx-background-radius: 100%;
+    -fx-background-color: #FF5252;
+    -fx-text-fill: white;
+}

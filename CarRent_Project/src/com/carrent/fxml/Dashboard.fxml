@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.carrent.controller.DashboardController">
+   <children>
+      <VBox prefHeight="800.0" prefWidth="200.0" styleClass="sideBar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="90.0" prefWidth="205.0" styleClass="dash-logo" text="Car Rents">
+               <graphic>
+                  <ImageView fitHeight="83.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/logo%20(2).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+            <TextField styleClass="search-input" text="Search">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </TextField>
+            <JFXButton graphicTextGap="10.0" prefHeight="40.0" prefWidth="200.0" styleClass="menu-button-selected" text="Home">
+               <graphic>
+                  <FontAwesomeIconView glyphName="HOME" size="25" styleClass="glyph-selected" wrappingWidth="20.214284896850586" />
+               </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton graphicTextGap="10.0" layoutX="10.0" layoutY="193.0" prefHeight="40.0" prefWidth="200.0" styleClass="menu-button" text="Client">
+               <graphic>
+                  <FontAwesomeIconView glyphName="USERS" size="20" styleClass="glyph" wrappingWidth="20.214284896850586" />
+               </graphic>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton graphicTextGap="10.0" layoutX="10.0" layoutY="233.0" prefHeight="40.0" prefWidth="200.0" styleClass="menu-button" text="Vehicules">
+               <graphic>
+                  <FontAwesomeIconView glyphName="CAR" size="20" styleClass="glyph" wrappingWidth="20.214284896850586" />
+               </graphic>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton graphicTextGap="10.0" layoutX="10.0" layoutY="273.0" prefHeight="40.0" prefWidth="200.0" styleClass="menu-button" text="Reservation">
+               <graphic>
+                  <FontAwesomeIconView glyphName="KEY" size="23" styleClass="glyph" wrappingWidth="20.214284896850586" />
+               </graphic>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton graphicTextGap="10.0" layoutX="10.0" layoutY="313.0" prefHeight="40.0" prefWidth="200.0" styleClass="menu-button" text="Invoices">
+               <graphic>
+                  <FontAwesomeIconView glyphName="FILE_TEXT_ALT" size="20" styleClass="glyph" wrappingWidth="20.214284896850586" />
+               </graphic>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton graphicTextGap="10.0" layoutX="10.0" layoutY="353.0" prefHeight="40.0" prefWidth="200.0" styleClass="menu-button" text="Planner">
+               <graphic>
+                  <FontAwesomeIconView glyphName="CALENDAR" size="20" styleClass="glyph" wrappingWidth="20.214284896850586" />
+               </graphic>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </JFXButton>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="200.0" prefHeight="131.0" prefWidth="1000.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0">
+         <effect>
+            <DropShadow color="#0000006e" height="10.0" radius="4.5" width="10.0" />
+         </effect>
+         <children>
+            <FontAwesomeIconView fill="#727272" glyphName="BELL" layoutX="746.0" layoutY="63.0" size="20" AnchorPane.rightAnchor="234.0" />
+            <FontAwesomeIconView fill="#727272" glyphName="GEAR" layoutX="786.0" layoutY="62.0" size="20" AnchorPane.rightAnchor="196.8571434020996" />
+            <Label id="notif-lbl" alignment="CENTER" layoutX="758.0" layoutY="34.0" prefHeight="4.0" prefWidth="17.0" text="6" AnchorPane.rightAnchor="225.0" />
+            <ImageView fitHeight="40.0" fitWidth="37.0" layoutX="833.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="130.0">
+               <image>
+                  <Image url="@../../../../../CarRent/src/com/carrent/image/lady.png" />
+               </image>
+            </ImageView>
+            <Label contentDisplay="RIGHT" layoutX="880.0" layoutY="46.0" text="Isobel" AnchorPane.rightAnchor="66.0">
+               <graphic>
+                  <FontAwesomeIconView glyphName="ANGLE_DOWN" size="15" />
+               </graphic>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
